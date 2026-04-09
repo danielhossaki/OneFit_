@@ -307,7 +307,7 @@ body {
   align-items: center;
 
   scroll-margin-top: 88px;
-  padding: 4rem 0;
+  padding: 2rem 1rem;
 }
 
 /* titulo */
@@ -324,7 +324,7 @@ body {
   letter-spacing: -1px;
 
   /* Gradiente Premium: Branco com um toque de Ouro */
-  background: linear-gradient(135deg, #ffffff 30%, #74550059 100%);
+  background: linear-gradient(135deg, #ffffff 30%, #94700d5e 100%);
 
   -webkit-background-clip: text;
   background-clip: text;
@@ -369,6 +369,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2rem;
   gap: 10px;
 
   width: 100%;
@@ -421,7 +422,7 @@ body {
 .plano-card:hover {
   transform: translateY(-10px) scale(1.02);
   box-shadow:
-    0 0 30px rgba(245, 180, 0, 0.7),
+    0 0 10px rgba(245, 180, 0, 0.808),
     0 8px 20px rgba(0, 0, 0, 0.6);
 }
 
@@ -477,27 +478,24 @@ body {
   border: none;
   border-radius: 12px;
   padding: 12px;
-  font-weight: 700;
+  font-weight: 650;
 
   /* vidro / glass com opacidade mais baixa */
   background: rgb(255, 255, 255);
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(10px);
   color: #000000;
-  box-shadow:
-    0 0 10px rgb(255, 255, 255);
-
   cursor: pointer;
   transition: all 0.25s ease;
   border: 1px solid rgba(0, 0, 0, 0.329);
 }
 
 .plano-btn:hover {
-  color: #bbb;
+  color: #f1ecec;
   box-shadow:
-    0 0 20px rgba(245, 180, 0, 1),
+    0 0 10px rgba(245, 180, 0, 1),
     0 4px 15px rgba(0, 0, 0, 0.5);
   transform: translateY(-2px);
-  background: rgb(180, 144, 24);
+  background: #A38017;
   /* aumenta um pouco no hover */
 }
 
@@ -524,6 +522,38 @@ body {
   }
 
 }
+
+#seta-left-carrossel-planos{
+  width: 45px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5b400;
+  border-radius: 20px;
+  font-size: 2rem;
+}
+
+#seta-left-carrossel-planos:hover{
+  cursor: pointer;
+}
+
+#seta-right-carrossel-planos{
+  width: 45px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5b400;
+  border-radius: 20px;
+  font-size: 2rem;
+}
+
+#seta-right-carrossel-planos:hover{
+  cursor: pointer;
+}
+
+ 
 
 /* ============================= FIM DESIGN DOS CARDS - PLANOS ==========================*/
 
@@ -580,7 +610,7 @@ body {
 
 
   /* Gradiente Premium: Branco com um toque de Ouro */
-  background: linear-gradient(135deg, #ffffff 30%, #74550059 100%);
+  background: linear-gradient(135deg, #ffffff 30%, #94700d5e 100%);
 
   -webkit-background-clip: text;
   background-clip: text;
@@ -904,7 +934,7 @@ body {
 
 
   /* Gradiente Premium: Branco com um toque de Ouro */
-  background: linear-gradient(135deg, #ffffff 30%, #74550059 100%);
+  background: linear-gradient(135deg, #ffffff 30%, #94700d5e 100%);
 
   -webkit-background-clip: text;
   background-clip: text;
@@ -957,15 +987,14 @@ body {
 
 #sobre {
   width: 100%;
-  min-height: 100vh;
+  min-height: auto;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 
   scroll-margin-top: 88px;
-  padding: 4rem 2rem;
+  padding: 8rem 2rem;
 }
 
 /* titulo */
@@ -991,7 +1020,7 @@ body {
   letter-spacing: -1px;
 
   /* Gradiente Premium: Branco com um toque de Ouro */
-  background: linear-gradient(135deg, #ffffff 30%, #74550059 100%);
+  background: linear-gradient(135deg, #ffffff 30%, #94700d5e 100%);
 
   -webkit-background-clip: text;
   background-clip: text;
@@ -1044,8 +1073,8 @@ body {
 /* container 3D */
 
 .card-container {
-  width: 260px;
-  height: 200px;
+  min-width: 360px;
+  min-height: 360px;
   perspective: 1000px;
   cursor: pointer;
 }
@@ -1091,7 +1120,7 @@ body {
   justify-content: center;
   align-items: center;
 
-  border: 1px solid rgba(255, 215, 0, 0.5);
+  border: 1px solid rgba(255, 217, 0, 0.24);
 
   box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
 
@@ -1102,11 +1131,13 @@ body {
 /* frente do card */
 
 .card-front {
-  background: linear-gradient(180deg, #0c0c0c 0%, #171100 100%);
+  background-color: #000000c5;
   transform: rotateY(0deg);
 }
 
 .card-front h2{
+font-size: 40px !important;
+
   margin: 0 !important;
   
   /* Aumentado para mais imponência */
@@ -1115,7 +1146,7 @@ body {
   letter-spacing: -1px;
 
   /* Gradiente Premium: Branco com um toque de Ouro */
-  background: linear-gradient(135deg, #ffffff9e 30%, #a27d1780 100%);
+  background: linear-gradient(135deg, #ffffff9e 30%, #ffd95a 100%);
 
   -webkit-background-clip: text;
   background-clip: text;
@@ -1131,7 +1162,7 @@ body {
 /* verso do card */
 
 .card-back {
-  background: linear-gradient(180deg, #231b00 0%, #0e0e0e 100%);
+  background-color: #00000054;
   color: rgba(255, 255, 255, 0.92);
   transform: rotateY(180deg);
 }
@@ -1142,7 +1173,7 @@ body {
   text-align: left;
   width: 100%;
   margin: 0 !important;
-  font-weight: 600 !important;
+  font-weight: 400 !important;
   color: inherit;
 }
 
@@ -1155,10 +1186,16 @@ body {
     transition-duration: 0.8s;
 }
 
+@media (max-width: 768px) {
+
+  
+
+}
+
 
  /* ==================== LOCALIZAÇÃO ===================== */
 #localizacao {
-  padding: 2rem 0 3px;
+  padding: 4rem 0 3px;
   text-align: center;
   color: white;
 
@@ -1183,7 +1220,7 @@ body {
   letter-spacing: -1px;
 
   /* Gradiente Premium: Branco com um toque de Ouro */
-  background: linear-gradient(135deg, #ffffff 30%, #74550059 100%);
+  background: linear-gradient(135deg, #ffffff 30%, #94700d5e 100%);
 
   -webkit-background-clip: text;
   background-clip: text;
@@ -1247,10 +1284,22 @@ body {
 
 /* ========================= FOOTER ========================= */
 footer {
+  display: flex;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
   border-top: 1px solid rgba(255, 255, 255, .06);
   background: rgba(11, 11, 11, .55);
   backdrop-filter: blur(10px);
 }
+
+
+
+
+
 
 .footer-link {
   color: rgba(255, 255, 255, .75);
@@ -1261,3 +1310,12 @@ footer {
 .footer-link:hover {
   color: #fff;
 }
+
+
+
+
+
+
+
+
+

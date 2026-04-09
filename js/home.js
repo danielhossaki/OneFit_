@@ -68,67 +68,6 @@ function renderPublicPlans() {
   index = 0;
 }
 
-function renderPublicStaff() {
-  const track = document.getElementById("carrossel-card-profissional");
-  if (!track) return;
-
-  const publicCatalog = window.ONEFIT_PUBLIC_CATALOG;
-  if (!publicCatalog || typeof publicCatalog.getStaff !== "function") return;
-
-  const staff = publicCatalog
-    .getStaff()
-    .filter((member) => String(member?.status || "").toUpperCase() === "ATIVO");
-
-  if (!staff.length) return;
-
-  track.innerHTML = staff
-    .map((member) => {
-      const name = escapeHtml(member.name || "Profissional");
-      const displayRole = escapeHtml(
-        member.displayRole ||
-          (typeof publicCatalog.roleLabel === "function"
-            ? publicCatalog.roleLabel(member.role)
-            : member.role || "Profissional")
-      );
-      const specialty = escapeHtml(member.specialty || "Sem especialidade informada");
-      const experience = escapeHtml(member.experience || "Sem experiência informada");
-      const doc = escapeHtml(member.doc || "Documento não informado");
-      const photo = String(member.photo || "").trim();
-      const photoHtml = photo
-        ? `<img src="${escapeHtml(photo)}" alt="${name}">`
-        : `<div class="foto-profissional-vazia">Sem foto</div>`;
-      const whatsappLink =
-        member.whatsappLink ||
-        (typeof publicCatalog.normalizeWhatsappLink === "function"
-          ? publicCatalog.normalizeWhatsappLink(member.whatsapp)
-          : "");
-      const whatsappHtml = whatsappLink
-        ? `
-              <a href="${escapeHtml(whatsappLink)}" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
-                <i class="fa-brands fa-whatsapp"></i> WhatsApp
-              </a>
-          `
-        : "";
-
-      return `
-            <div class="card-profissional" data-aos="fade-up">
-              <div class="foto-profissional">
-                ${photoHtml}
-              </div>
-              <h3 class="nome-profissional">${name}</h3>
-              <p class="funcao-profissional">${displayRole}</p>
-              <p class="info-profissional">${specialty}</p>
-              <p class="info-profissional">${experience}</p>
-              <p class="info-profissional">${doc}</p>
-              ${whatsappHtml}
-            </div>
-        `;
-    })
-    .join("");
-
-  indexProfissional = 0;
-}
-
 function getMaxIndexPlanos(totalCards) {
   return Math.max(0, totalCards - visibleCards);
 }

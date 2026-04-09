@@ -74,19 +74,19 @@ nav-blur = classe personalizada -->
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#planos">Planos</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="#profissional">Profissionais</a>
-            </li>
-
-            <li class="nav-item">
               <a class="nav-link" href="#sobre">Sobre Nós</a>
             </li>
 
             <li class="nav-item">
+              <a class="nav-link" href="#planos">Planos</a>
+            </li>
+
+            <li class="nav-item">
               <a class="nav-link" href="#localizacao">Localização</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="./telaProfissionais.html">Profissionais</a>
             </li>
 
 
@@ -205,359 +205,6 @@ nav-blur = classe personalizada -->
       </div>
     </section>
 
-
-    <!-- ===================================================== -->
-    <!-- PLANOS -->
-    <!-- ===================================================== -->
-    <section id="planos" data-aos="fade-up">
-
-      <div class="planos-titulo">
-        <h2>Nossos Planos</h2>
-        <p>Escolha o plano ideal para sua evolução</p>
-      </div>
-
-      <div class="carrossel-planos">
-
-        <button class="btn left" id="seta-left-carrossel-planos" onclick="moveLeftPlanos()" style="color: #fff;">◀</button>
-
-
-        <div class="carrossel-window-planos">
-
-          <div class="carrossel-card" id="carrossel-card-planos">
-
-            <div class="plano-card" data-aos="fade-up" data-plan-key="BRONZE" data-plan-name="Bronze" data-plan-price="79.00">
-              <h3 class="plano-nome">Bronze</h3>
-              <p class="plano-preco">R$ 79<span>/mês</span></p>
-
-              <ul class="plano-beneficios">
-                <li>Musculação livre</li>
-                <li>Avaliação física</li>
-                <li>Acesso horário normal</li>
-              </ul>
-
-              <a href="./matricula.html">
-                <button class="plano-btn w-100">Matricule-se</button>
-              </a>
-            </div>
-
-
-            <div class="plano-card" data-aos="fade-up" data-plan-key="PRATA" data-plan-name="Prata" data-plan-price="99.00">
-              <h3 class="plano-nome">Prata</h3>
-              <p class="plano-preco">R$ 99<span>/mês</span></p>
-
-              <ul class="plano-beneficios">
-                <li>Musculação</li>
-                <li>Aeróbico</li>
-                <li>Avaliação física</li>
-                <li>Treino personalizado</li>
-              </ul>
-
-              <a href="./matricula.html">
-                <button class="plano-btn w-100">Matricule-se</button>
-              </a>
-            </div>
-
-
-            <div class="plano-card" data-aos="fade-up" data-plan-key="GOLD" data-plan-name="Gold" data-plan-price="129.00">
-              <h3 class="plano-nome">Gold</h3>
-              <p class="plano-preco">R$ 129<span>/mês</span></p>
-
-              <ul class="plano-beneficios">
-                <li>Musculação</li>
-                <li>Aeróbico</li>
-                <li>Aulas em grupo</li>
-                <li>Avaliação física</li>
-              </ul>
-
-              <a href="./matricula.html">
-                <button class="plano-btn w-100">Matricule-se</button>
-              </a>
-            </div>
-
-
-            <div class="plano-card" data-aos="fade-up" data-plan-key="PREMIUM" data-plan-name="Premium" data-plan-price="159.00">
-              <h3 class="plano-nome">Premium</h3>
-              <p class="plano-preco">R$ 159<span>/mês</span></p>
-
-              <ul class="plano-beneficios">
-                <li>Tudo liberado</li>
-                <li>Personal incluso</li>
-                <li>Acesso total</li>
-                <li>Aulas VIP</li>
-              </ul>
-
-              <a href="./matricula.html">
-                <button class="plano-btn w-100">Matricule-se</button>
-              </a>
-            </div>
-
-
-            <div class="plano-card" data-aos="fade-up" data-plan-key="BLACK" data-plan-name="Black" data-plan-price="199.00">
-              <h3 class="plano-nome">Black</h3>
-              <p class="plano-preco">R$ 199<span>/mês</span></p>
-
-              <ul class="plano-beneficios">
-                <li>Tudo liberado</li>
-                <li>Personal premium</li>
-                <li>24h acesso</li>
-                <li>Área exclusiva</li>
-              </ul>
-
-              <a href="./matricula.html">
-                <button class="plano-btn w-100">Matricule-se</button>
-              </a>
-            </div>
-
-          </div>
-
-        </div>
-
-        <button class="btn right" id="seta-right-carrossel-planos" onclick="moveRightPlanos()" style="color: #fff;">▶</button>
-
-      </div>
-
-    </section>
-
-
-    <!-- ===================================================== -->
-    <!-- PROFISSIONAL -->
-    <!-- ===================================================== -->
-    <section id="profissional" data-aos="fade-up">
-      <div class="profissional-titulo">
-        <h2>Conheça a nossa equipe</h2>
-        <p>Conheça nossos profissionais e seus trabalhos</p>
-      </div>
-
-      <div class="carrossel-profissional">
-
-        <button class="btn left" id="seta-left-carrossel-profissional" onclick="moveLeftProfissional()" style="color: #fff;">◀</button>
-
-
-        <div class="carrossel-window-profissional">
-
-          <div class="carrossel-card" id="carrossel-card-profissional">
-
-            <!-- PROFISSIONAL 1 -->
-            <div class="card-profissional" data-aos="fade-up">
-
-              <div class="foto-profissional">
-                <img src="img/personal-trainer.png">
-              </div>
-
-              <h3 class="nome-profissional">Carlos Silva</h3>
-
-              <p class="funcao-profissional">Personal Trainer</p>
-
-              <p class="info-profissional">
-                Especialista em hipertrofia e emagrecimento
-              </p>
-
-              <p class="info-profissional">
-                8 anos de experiência
-              </p>
-
-              <p class="info-profissional">
-                CREF: 123456-G/SP
-              </p>
-
-              <a href="https://wa.me/5512991111111" target="_blank" class="btn-whatsapp">
-                <i class="fa-brands fa-whatsapp"></i> WhatsApp
-              </a>
-
-            </div>
-
-
-            <!-- PROFISSIONAL 2 -->
-            <div class="card-profissional" data-aos="fade-up">
-              <div class="foto-profissional">
-                <img src="img/instrutura-de-musculacao.png">
-              </div>
-
-              <h3 class="nome-profissional">Juliana Rocha</h3>
-              <p class="funcao-profissional">Instrutora de Musculação</p>
-              <p class="info-profissional">
-                Especialista em hipertrofia e emagrecimento
-              </p>
-
-              <p class="info-profissional">
-                8 anos de experiência
-              </p>
-
-              <p class="info-profissional">
-                CREF: 123456-G/SP
-              </p>
-
-              <a href="https://wa.me/5512991111111" target="_blank" class="btn-whatsapp">
-                <i class="fa-brands fa-whatsapp"></i> WhatsApp
-              </a>
-            </div>
-
-
-            <!-- PROFISSIONAL 3 -->
-            <div class="card-profissional" data-aos="fade-up">
-              <div class="foto-profissional">
-                <img src="img/professora_dança.png">
-              </div>
-
-              <h3 class="nome-profissional">Fernanda Alves</h3>
-              <p class="funcao-profissional">Professora de Dança</p>
-              <p class="info-profissional">
-                Especialista em hipertrofia e emagrecimento
-              </p>
-
-              <p class="info-profissional">
-                8 anos de experiência
-              </p>
-
-              <p class="info-profissional">
-                CREF: 123456-G/SP
-              </p>
-
-              <a href="https://wa.me/5512991111111" target="_blank" class="btn-whatsapp">
-                <i class="fa-brands fa-whatsapp"></i> WhatsApp
-              </a>
-            </div>
-
-
-            <!-- PROFISSIONAL 4 -->
-            <div class="card-profissional" data-aos="fade-up">
-              <div class="foto-profissional">
-                <img src="img/nutricionista.png">
-              </div>
-
-              <h3 class="nome-profissional">Ricardo Souza</h3>
-              <p class="funcao-profissional">Nutricionista</p>
-              <p class="info-profissional">
-                Especialista em hipertrofia e emagrecimento
-              </p>
-
-              <p class="info-profissional">
-                8 anos de experiência
-              </p>
-
-              <p class="info-profissional">
-                CREF: 123456-G/SP
-              </p>
-
-              <a href="https://wa.me/5512991111111" target="_blank" class="btn-whatsapp">
-                <i class="fa-brands fa-whatsapp"></i> WhatsApp
-              </a>
-            </div>
-
-
-            <!-- PROFISSIONAL 5 -->
-            <div class="card-profissional" data-aos="fade-up">
-              <div class="foto-profissional">
-                <img src="img/professor-funcional.png">
-              </div>
-
-              <h3 class="nome-profissional">Bruno Martins</h3>
-              <p class="funcao-profissional">Professor de Funcional</p>
-              <p class="info-profissional">
-                Especialista em hipertrofia e emagrecimento
-              </p>
-
-              <p class="info-profissional">
-                8 anos de experiência
-              </p>
-
-              <p class="info-profissional">
-                CREF: 123456-G/SP
-              </p>
-
-              <a href="https://wa.me/5512991111111" target="_blank" class="btn-whatsapp">
-                <i class="fa-brands fa-whatsapp"></i> WhatsApp
-              </a>
-            </div>
-
-            <!-- PROFISSIONAL 6 -->
-            <div class="card-profissional" data-aos="fade-up">
-              <div class="foto-profissional">
-                <img src="img/professor-cross-training.png">
-              </div>
-
-              <h3 class="nome-profissional">Marcos Lima</h3>
-              <p class="funcao-profissional">Professor de Cross Training</p>
-              <p class="info-profissional">
-                Especialista em hipertrofia e emagrecimento
-              </p>
-
-              <p class="info-profissional">
-                8 anos de experiência
-              </p>
-
-              <p class="info-profissional">
-                CREF: 123456-G/SP
-              </p>
-
-              <a href="https://wa.me/5512991111111" target="_blank" class="btn-whatsapp">
-                <i class="fa-brands fa-whatsapp"></i> WhatsApp
-              </a>
-            </div>
-
-
-            <!-- PROFISSIONAL 7 -->
-            <div class="card-profissional" data-aos="fade-up">
-              <div class="foto-profissional">
-                <img src="img/professora-pilates.png">
-              </div>
-
-              <h3 class="nome-profissional">Patricia Gomes</h3>
-              <p class="funcao-profissional">Instrutora de Pilates</p>
-              <p class="info-profissional">
-                Especialista em hipertrofia e emagrecimento
-              </p>
-
-              <p class="info-profissional">
-                8 anos de experiência
-              </p>
-
-              <p class="info-profissional">
-                CREF: 123456-G/SP
-              </p>
-
-              <a href="https://wa.me/5512991111111" target="_blank" class="btn-whatsapp">
-                <i class="fa-brands fa-whatsapp"></i> WhatsApp
-              </a>
-            </div>
-
-
-            <!-- PROFISSIONAL 8 -->
-            <div class="card-profissional" data-aos="fade-up">
-              <div class="foto-profissional">
-                <img src="img/fisioterapeuta-esportivo.png">
-              </div>
-
-              <h3 class="nome-profissional">André Carvalho</h3>
-              <p class="funcao-profissional">Fisioterapeuta Esportivo</p>
-              <p class="info-profissional">
-                Especialista em hipertrofia e emagrecimento
-              </p>
-
-              <p class="info-profissional">
-                8 anos de experiência
-              </p>
-
-              <p class="info-profissional">
-                CREF: 123456-G/SP
-              </p>
-
-              <a href="https://wa.me/5512991111111" target="_blank" class="btn-whatsapp">
-                <i class="fa-brands fa-whatsapp"></i> WhatsApp
-              </a>
-            </div>
-
-          </div>
-
-        </div>
-
-        <button class="btn right" id="seta-right-carrossel-profissional" onclick="moveRightProfissional()" style="color: #fff;">▶</button>
-
-      </div>
-
-    </section>
-
-
     <!-- ===================================================== -->
     <!-- NOSSO ESPAÇO -->
     <!-- ===================================================== -->
@@ -593,7 +240,6 @@ nav-blur = classe personalizada -->
 
     </section>
 
-
     <!-- ===================================================== -->
     <!-- SOBRE NOS -->
     <!-- ===================================================== -->
@@ -608,7 +254,7 @@ nav-blur = classe personalizada -->
 
 
         <!-- MISSÃO -->
-        <div class="card-container" data-aos="fade-up-right">
+        <div class="card-container" data-aos="zoom-in">
           <div class="card-missao">
 
             <div class="card-face card-front">
@@ -617,10 +263,10 @@ nav-blur = classe personalizada -->
 
             <div class="card-face card-back">
               <p>
-                Transformar vidas através do treino,
-                promovendo saúde, disciplina e evolução
-                física e mental em um ambiente moderno
-                e de alto padrão.
+                Impactar positivamente a vida das pessoas por meio do treinamento físico, incentivando não apenas a
+                melhoria da saúde, mas também o desenvolvimento da disciplina, da constância e do equilíbrio entre corpo
+                e mente. Tudo isso em um ambiente moderno, sofisticado e cuidadosamente planejado para proporcionar uma
+                experiência de alto padrão, focada na evolução contínua e no bem-estar integral.
               </p>
             </div>
 
@@ -629,7 +275,7 @@ nav-blur = classe personalizada -->
 
 
         <!-- VISÃO -->
-        <div class="card-container" data-aos="fade-up">
+        <div class="card-container" data-aos="zoom-in">
           <div class="card-missao">
 
             <div class="card-face card-front">
@@ -638,9 +284,9 @@ nav-blur = classe personalizada -->
 
             <div class="card-face card-back">
               <p>
-                Ser referência em treinamento e qualidade
-                de vida, oferecendo estrutura moderna,
-                motivação e acompanhamento profissional.
+                Tornar-se referência em treinamento físico e qualidade de vida, proporcionando uma estrutura moderna e
+                completa, aliada a um ambiente motivador e a um acompanhamento profissional de excelência, focado no
+                desenvolvimento contínuo, na performance e no bem-estar de cada pessoa.
               </p>
             </div>
 
@@ -649,7 +295,7 @@ nav-blur = classe personalizada -->
 
 
         <!-- VALORES -->
-        <div class="card-container" data-aos="fade-up-left">
+        <div class="card-container" data-aos="zoom-in">
           <div class="card-missao">
 
             <div class="card-face card-front">
@@ -658,14 +304,133 @@ nav-blur = classe personalizada -->
 
             <div class="card-face card-back">
               <p>
-                Disciplina, respeito, dedicação,
-                compromisso com resultados,
-                saúde e excelência no atendimento.
+                Disciplina como base, respeito em cada relação, dedicação constante e compromisso real com resultados.
+                Valorização da saúde em primeiro lugar, aliada a um padrão elevado de excelência no atendimento,
+                garantindo uma experiência completa, profissional e transformadora.
               </p>
             </div>
 
           </div>
         </div>
+
+      </div>
+
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- PLANOS -->
+    <!-- ===================================================== -->
+    <section id="planos" data-aos="fade-up">
+
+      <div class="planos-titulo">
+        <h2>Nossos Planos</h2>
+        <p>Escolha o plano ideal para sua evolução</p>
+      </div>
+
+      <div class="carrossel-planos">
+
+        <i class="fa-solid fa-angle-left" id="seta-left-carrossel-planos" onclick="moveLeftPlanos()"
+          style="color: #000000;"></i>
+
+
+        <div class="carrossel-window-planos">
+
+          <div class="carrossel-card" id="carrossel-card-planos">
+
+            <div class="plano-card" data-aos="fade-up" data-plan-key="BRONZE" data-plan-name="Bronze"
+              data-plan-price="79.00">
+              <h3 class="plano-nome">Bronze</h3>
+              <p class="plano-preco">R$ 79<span>/mês</span></p>
+
+              <ul class="plano-beneficios">
+                <li>Musculação livre</li>
+                <li>Avaliação física</li>
+                <li>Acesso horário normal</li>
+              </ul>
+
+              <a href="./matricula.html">
+                <button class="plano-btn w-100">Matricule-se</button>
+              </a>
+            </div>
+
+
+            <div class="plano-card" data-aos="fade-up" data-plan-key="PRATA" data-plan-name="Prata"
+              data-plan-price="99.00">
+              <h3 class="plano-nome">Prata</h3>
+              <p class="plano-preco">R$ 99<span>/mês</span></p>
+
+              <ul class="plano-beneficios">
+                <li>Musculação</li>
+                <li>Aeróbico</li>
+                <li>Avaliação física</li>
+                <li>Treino personalizado</li>
+              </ul>
+
+              <a href="./matricula.html">
+                <button class="plano-btn w-100">Matricule-se</button>
+              </a>
+            </div>
+
+
+            <div class="plano-card" data-aos="fade-up" data-plan-key="GOLD" data-plan-name="Gold"
+              data-plan-price="129.00">
+              <h3 class="plano-nome">Gold</h3>
+              <p class="plano-preco">R$ 129<span>/mês</span></p>
+
+              <ul class="plano-beneficios">
+                <li>Musculação</li>
+                <li>Aeróbico</li>
+                <li>Aulas em grupo</li>
+                <li>Avaliação física</li>
+              </ul>
+
+              <a href="./matricula.html">
+                <button class="plano-btn w-100">Matricule-se</button>
+              </a>
+            </div>
+
+
+            <div class="plano-card" data-aos="fade-up" data-plan-key="PREMIUM" data-plan-name="Premium"
+              data-plan-price="159.00">
+              <h3 class="plano-nome">Premium</h3>
+              <p class="plano-preco">R$ 159<span>/mês</span></p>
+
+              <ul class="plano-beneficios">
+                <li>Tudo liberado</li>
+                <li>Personal incluso</li>
+                <li>Acesso total</li>
+                <li>Aulas VIP</li>
+              </ul>
+
+              <a href="./matricula.html">
+                <button class="plano-btn w-100">Matricule-se</button>
+              </a>
+            </div>
+
+
+            <div class="plano-card" data-aos="fade-up" data-plan-key="BLACK" data-plan-name="Black"
+              data-plan-price="199.00">
+              <h3 class="plano-nome">Black</h3>
+              <p class="plano-preco">R$ 199<span>/mês</span></p>
+
+              <ul class="plano-beneficios">
+                <li>Tudo liberado</li>
+                <li>Personal premium</li>
+                <li>24h acesso</li>
+                <li>Área exclusiva</li>
+              </ul>
+
+              <a href="./matricula.html">
+                <button class="plano-btn w-100">Matricule-se</button>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+        <i class="fa-solid fa-angle-right" id="seta-right-carrossel-planos" onclick="moveRightPlanos()"
+          style="color: #000000;"></i>
 
       </div>
 
@@ -691,68 +456,27 @@ nav-blur = classe personalizada -->
     </section>
   </main>
 
-
   <!-- ===================================================== -->
   <!-- FOOTER -->
   <!-- ===================================================== -->
-  <footer class="py-4">
-    <!-- py-4 = padding vertical -->
+  <footer id="rodape-1">
 
-    <div class="container">
-
-      <div class="row g-3 align-items-center">
-        <!-- row = linha bootstrap -->
-        <!-- g-3 = espaço entre colunas -->
-
-
-        <!-- LADO ESQUERDO -->
-        <div class="col-md-6">
-
-          <!-- nome do site -->
-          <div class="fw-bold" style="color:#fff;">
-            OneFit
-          </div>
-
-          <!-- direitos autorais -->
-          <div class="small" style="color:rgba(255,255,255,.70)">
-
-            Direitos autorais ©
-            <span id="year"></span>
-            <!-- ano automático via JS -->
-
-            • Todos os direitos reservados
-
-          </div>
-
-        </div>
-
-
-
-        <!-- LADO DIREITO -->
-        <div class="col-md-6 text-md-end">
-
-          <!-- links do footer -->
-
-          <a class="footer-link me-3" href="#inicio">
-            Início
-          </a>
-
-          <a class="footer-link me-3" href="#sobre">
-            Sobre
-          </a>
-
-          <a class="footer-link me-3" href="#planos">
-            Planos
-          </a>
-
-          <a class="footer-link" href="#profissionais">
-            Profissionais
-          </a>
-
-        </div>
-
-      </div>
+    <div class="holder-1-rodape">
+      <img src="./img/logo_onefit.png" alt="">
     </div>
+    
+    <div class="holder-2-rodape">
+      
+    </div>
+
+    <div class="holder-3-rodape">
+      
+    </div>
+
+    <div class="holder-4-rodape">
+      
+    </div>
+    
   </footer>
 
 
