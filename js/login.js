@@ -20,7 +20,7 @@ const ADMIN_SENHA = "123123";
    ACESSO PROFISSIONAL FIXO
    ========================= */
 const PROFISSIONAL_EMAIL = "profissional@onefit.com";
-const PROFISSIONAL_SENHA = "prof123";
+const PROFISSIONAL_SENHA = "123123";
 
 /* =========================
    ACESSO ALUNO FIXO (teste)
