@@ -1,0 +1,169 @@
+/* ========================= FOOTER ========================= */
+
+footer{
+background: rgba(0, 0, 0, 0.575);
+backdrop-filter: blur(10px);
+
+}
+
+/* ----------- RODAPE 1 ----------- */
+#rodape-1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 90px 60px 30px;
+
+  flex-wrap: wrap; /* ajuda no mobile */
+  gap: 1rem;
+}
+
+#rodape-1 > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* parte dos links */
+#rodape-1 a {
+  display: inline-flex; /* em vez de 100% */
+  align-items: center;
+  gap: 6px; /* espaço entre texto e ícone */
+
+  width: fit-content; /* garante que só vai até o conteúdo */
+
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.75s ease;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+#rodape-1 a:hover {
+  background-color: #a7a7a7;
+  color: #000000;
+}
+
+.seta-link-footer{
+  font-size: 8px;
+  color: white;
+  transition: 0.25s ease;
+}
+
+#rodape-1 a:hover img {
+  filter: brightness(0);
+}
+
+/* holder com o botao do ENTRE EM CONTATO */
+.holder-4-rodape h2{
+  font-size: 1.2rem;
+  font-weight: 510 !important;
+  margin: 0 0 0 12px !important;
+  padding: 0 !important;
+}
+
+#botao-fale-conosco{
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0000002d;
+  border-color: white;
+  border-radius: 2rem;
+  gap: 1rem ;
+}
+
+#botao-fale-conosco:hover{
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0000002d;
+  border-color: white;
+  border-radius: 2rem;
+  gap: 1rem ;
+}
+
+#seta-link-botao{
+  font-size: 8px;
+  color: white;
+}
+
+
+/* ------------ RODAPE 2 ----------- */
+#rodape-2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  flex-wrap: wrap; /* ajuda no mobile */
+}
+
+#titulo-rodape-2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+#titulo-rodape-2 h2{
+  font-size: 1.2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0 !important;
+}
+
+.redes-sociais {
+  width: 23%;
+  display: flex;
+  justify-content: space-around;
+  gap: 6px; /* diminui o espaço entre os ícones */  
+  margin-top: 10px;
+}
+
+.redes-sociais a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 6px;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+
+/* ICONES DE REDE SOCIAL */
+.redes-sociais img {
+  width: 30px;
+  height: 30px;
+  transition: 0.5s;
+}
+
+/* hover */
+.redes-sociais a:hover {
+  background-color: #fff;
+}
+
+/* deixa o ícone preto no hover */
+.redes-sociais a:hover img {
+  filter: brightness(0);
+}
+
+.footer-bottom_separador{
+  background-color: #fff;
+  width: 90%;
+  height: 1px;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.text-size-tiny{
+  font-size: .75rem;
+}
+
+
+
+
+

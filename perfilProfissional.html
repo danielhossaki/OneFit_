@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="./css/perfilProfissional.css" />
+  <link rel="stylesheet" href="./css/footer.css">
 </head>
 
 <body>
@@ -30,7 +31,7 @@
         <div class="d-flex gap-2 align-items-center ">
           <button class="btn btn-gold btn-anim h44 px-3" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
             aria-controls="mobileMenu">
-            <i class="bi bi-list me-1"></i> 
+            <i class="bi bi-list me-1"></i>
           </button>
         </div>
       </div>
@@ -43,7 +44,7 @@
       <p class="text-muted mb-0">Organize agenda, ponto, pagamentos e contrato em um só lugar.</p>
     </div>
     <div class="app-shell">
-    
+
 
       <!-- LEFT SIDEBAR -->
       <aside class="sidebar glass d-none d-lg-block">
@@ -138,7 +139,7 @@
         <section class="view is-active" id="view-resumo">
           <div class="card p-4 js-stagger">
             <h6 class=" text-center fw-bold section-title mb-2">DASHBOARD</h6>
-          
+
           </div>
 
           <div class="card p-4 js-stagger mt-3">
@@ -386,8 +387,10 @@
                   <i class="bi bi-person-plus me-2"></i>+ ALUNO
                 </button>
 
-                <div class="agenda-month-nav" style="display:grid;grid-template-columns:38px minmax(0,1fr) 38px;align-items:center;gap:.5rem;">
-                  <button class="btn btn-gold btn-anim btn-square" style="width:38px;height:38px;padding:0;" onclick="prevMonth()" aria-label="Mês anterior">
+                <div class="agenda-month-nav"
+                  style="display:grid;grid-template-columns:38px minmax(0,1fr) 38px;align-items:center;gap:.5rem;">
+                  <button class="btn btn-gold btn-anim btn-square" style="width:38px;height:38px;padding:0;"
+                    onclick="prevMonth()" aria-label="Mês anterior">
                     <i class="bi bi-chevron-left"></i>
                   </button>
 
@@ -395,7 +398,8 @@
                     <span id="agendaMonthLabel">—</span>
                   </span>
 
-                  <button class="btn btn-gold btn-anim btn-square" style="width:38px;height:38px;padding:0;" onclick="nextMonth()" aria-label="Próximo mês">
+                  <button class="btn btn-gold btn-anim btn-square" style="width:38px;height:38px;padding:0;"
+                    onclick="nextMonth()" aria-label="Próximo mês">
                     <i class="bi bi-chevron-right"></i>
                   </button>
                 </div>
@@ -429,7 +433,7 @@
               <div class="col-lg-8">
                 <div class="agenda-list-head">
                   <div>
-                  <div class="agenda-title">Horários do mês</div>
+                    <div class="agenda-title">Horários do mês</div>
                     <div class="text-muted small">Agrupado por dia, ordenado por hora</div>
                   </div>
                 </div>
@@ -537,305 +541,457 @@
         </section>
 
       </main>
-    
-  </div>
 
-  <!-- OFFCANVAS (mobile menu) -->
-  <div class="offcanvas offcanvas-start offcanvas-premium" tabindex="-1" id="mobileMenu"
-    aria-labelledby="mobileMenuLabel">
-    <div class="offcanvas-header">
-      <div>
-        <div id="mobileMenuLabel" class="off-title">Menu</div>
-        <div class="small text-muted">Navegação rápida</div>
-      </div>
-      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
     </div>
-    <div class="offcanvas-body">
-      <div class="nav-rail" id="navRailMobile"></div>
-      <div class="mt-3">
-        <button class="btn btn-soft btn-anim w-100 h46" onclick="logout()" data-ripple-bound="1">
-          <i class="bi bi-box-arrow-right me-2"></i>Sair
-        </button>
+
+    <!-- OFFCANVAS (mobile menu) -->
+    <div class="offcanvas offcanvas-start offcanvas-premium" tabindex="-1" id="mobileMenu"
+      aria-labelledby="mobileMenuLabel">
+      <div class="offcanvas-header">
+        <div>
+          <div id="mobileMenuLabel" class="off-title">Menu</div>
+          <div class="small text-muted">Navegação rápida</div>
+        </div>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+          aria-label="Fechar"></button>
       </div>
-    </div>
-  </div>
-
-  <!-- MODAL SALÁRIO -->
-  <div class="modal fade" id="salaryModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content bg-dark text-white p-3 rounded-4 modal-premium">
-        <h5 class="fw-bold mb-3" id="salaryModalTitle">Adicionar salário</h5>
-
-        <div class="row g-3">
-          <div class="col-md-6">
-            <label class="form-label text-muted">Competência (ex.: 02/2026)</label>
-            <input id="inpSalCompet" class="form-control" placeholder="MM/AAAA">
-          </div>
-          <div class="col-md-6">
-            <label class="form-label text-muted">Valor (R$)</label>
-            <input id="inpSalValue" type="number" step="0.01" class="form-control" placeholder="0.00">
-          </div>
-          <div class="col-md-6">
-            <label class="form-label text-muted">Pago em</label>
-            <input id="inpSalPaidOn" class="form-control" placeholder="DD/MM/AAAA">
-          </div>
-          <div class="col-md-6">
-            <label class="form-label text-muted">Status</label>
-            <select id="inpSalStatus" class="form-select">
-              <option value="PAGO">PAGO</option>
-              <option value="PENDENTE">PENDENTE</option>
-            </select>
-          </div>
-        </div>
-
-        <input type="hidden" id="inpSalIndex" value="-1">
-
-        <div class="d-flex justify-content-end gap-2 mt-4">
-          <button class="btn btn-outline-light" style="border-radius:12px;" data-bs-dismiss="modal">Cancelar</button>
-          <button class="btn btn-gold btn-anim" style="border-radius:12px;font-weight:900"
-            onclick="saveSalary()">Salvar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- MODAL ALUNO -->
-  <div class="modal fade" id="studentModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content bg-dark text-white p-3 rounded-4 modal-premium">
-        <h5 class="fw-bold mb-3" id="studentModalTitle">Adicionar aluno</h5>
-
-        <div class="row g-3">
-          <div class="col-12">
-            <label class="form-label text-muted">Nome</label>
-            <input id="inpStName" class="form-control" placeholder="Nome do aluno">
-          </div>
-          <div class="col-md-6">
-            <label class="form-label text-muted">Contato (WhatsApp)</label>
-            <input id="inpStPhone" class="form-control" placeholder="(00) 00000-0000">
-          </div>
-          <div class="col-md-6">
-            <label class="form-label text-muted">Plano/Contrato</label>
-            <select id="inpStPlan" class="form-select">
-              <option value="Mensal">Mensal</option>
-              <option value="Trimestral">Trimestral</option>
-              <option value="Anual">Anual</option>
-            </select>
-          </div>
-          <div class="col-md-6">
-            <label class="form-label text-muted">Status</label>
-            <select id="inpStStatus" class="form-select">
-              <option value="ATIVO">ATIVO</option>
-              <option value="PAUSADO">PAUSADO</option>
-              <option value="ENCERRADO">ENCERRADO</option>
-            </select>
-          </div>
-          <div class="col-md-6">
-            <label class="form-label text-muted">Valor mensal (R$)</label>
-            <input id="inpStFee" type="number" step="0.01" class="form-control" placeholder="0.00">
-          </div>
-          <div class="col-12">
-            <label class="form-label text-muted">Observações</label>
-            <input id="inpStNote" class="form-control" placeholder="Ex.: 2x na semana, foco em hipertrofia">
-          </div>
-        </div>
-
-        <input type="hidden" id="inpStId" value="">
-
-        <div class="d-flex justify-content-between align-items-center gap-2 mt-4">
-          <button class="btn btn-outline-light" style="border-radius:12px;" data-bs-dismiss="modal">Cancelar</button>
-          <button class="btn btn-gold btn-anim" style="border-radius:12px;font-weight:900"
-            onclick="saveStudent()">Salvar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- MODAL EVENTO (AGENDA) -->
-  <div class="modal fade" id="eventModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content bg-dark text-white p-3 rounded-4 modal-premium">
-        <h5 class="fw-bold mb-3" id="eventModalTitle">Agendar horário</h5>
-
-        <div class="row g-3">
-          <div class="col-12">
-            <label class="form-label text-muted">Aluno</label>
-            <select id="inpEvStudentId" class="form-select"></select>
-            <div class="text-muted small mt-1">Se não aparecer, adicione o aluno primeiro.</div>
-          </div>
-          <div class="col-md-6">
-            <label class="form-label text-muted">Data</label>
-            <input id="inpEvDate" type="date" class="form-control">
-          </div>
-          <div class="col-md-6">
-            <label class="form-label text-muted">Hora</label>
-            <input id="inpEvTime" class="form-control" placeholder="HH:MM" inputmode="numeric" maxlength="5" autocomplete="off">
-          </div>
-          <div class="col-md-6">
-            <label class="form-label text-muted">Tipo</label>
-            <select id="inpEvType" class="form-select">
-              <option value="PERSONAL">PERSONAL</option>
-              <option value="AVALIAÇÃO">AVALIAÇÃO</option>
-              <option value="AULA">AULA</option>
-            </select>
-          </div>
-          <div class="col-md-6">
-            <label class="form-label text-muted">Local</label>
-            <input id="inpEvPlace" class="form-control" placeholder="Ex.: Sala 2 / Box">
-          </div>
-          <div class="col-12">
-            <label class="form-label text-muted">Observação</label>
-            <input id="inpEvNote" class="form-control" placeholder="Ex.: treino A, posterior, mobilidade...">
-          </div>
-        </div>
-
-        <input type="hidden" id="inpEvId" value="">
-
-        <div class="d-flex justify-content-between align-items-center gap-2 mt-4">
-          <button class="btn btn-outline-light" style="border-radius:12px;" data-bs-dismiss="modal">Cancelar</button>
-          <div class="d-flex gap-2">
-            <button class="icon-btn btn-anim btn-remove-event" onclick="deleteEvent()" aria-label="Remover">
-              <i class="bi bi-trash3 me-2"></i><span class="btn-remove-text">REMOVER</span>
-            </button>
-            <button class="btn btn-gold btn-anim" style="border-radius:12px;font-weight:900" onclick="saveEvent()">
-              <i class="bi bi-check2 me-2"></i>SALVAR
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- MODAL NOTA FISCAL -->
-  <div class="modal fade" id="invoiceModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content bg-dark text-white p-3 rounded-4 modal-premium">
-        <div class="d-flex justify-content-between align-items-start gap-3">
-          <div>
-            <h5 class="fw-bold mb-1">Nota Fiscal (Fake)</h5>
-            <div class="text-muted small" id="invSubtitle">Pedido —</div>
-          </div>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
-        </div>
-
-        <hr style="border-color: rgba(255,255,255,.10); margin: 14px 0;">
-
-        <div id="invBody" class="small"></div>
-
-        <div class="d-flex justify-content-end gap-2 mt-4">
-          <button class="btn btn-outline-light" style="border-radius:12px;" data-bs-dismiss="modal">Fechar</button>
-          <button class="btn btn-gold btn-anim" style="border-radius:12px;font-weight:900"
-            onclick="alert('Baixando PDF...')">Baixar PDF</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- MODAL RASTREIO -->
-  <div class="modal fade" id="trackingModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content bg-dark text-white p-3 rounded-4 modal-premium">
-        <div class="d-flex justify-content-between align-items-start gap-3">
-          <div>
-            <h5 class="fw-bold mb-1">Rastreio do pedido</h5>
-            <div class="text-muted small" id="trackingSubtitle">Simule as etapas de entrega.</div>
-          </div>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
-        </div>
-
-        <hr style="border-color: rgba(255,255,255,.10); margin: 14px 0;">
-        <div id="trackingBody"></div>
-
-        <div class="d-flex justify-content-between align-items-center gap-2 mt-4 flex-wrap">
-          <button class="btn btn-outline-light" style="border-radius:12px;" type="button" onclick="trackingPrevStep()">
-            Voltar etapa
-          </button>
-          <button class="btn btn-gold btn-anim" style="border-radius:12px;font-weight:900" type="button"
-            onclick="trackingNextStep()">
-            Avançar etapa
+      <div class="offcanvas-body">
+        <div class="nav-rail" id="navRailMobile"></div>
+        <div class="mt-3">
+          <button class="btn btn-soft btn-anim w-100 h46" onclick="logout()" data-ripple-bound="1">
+            <i class="bi bi-box-arrow-right me-2"></i>Sair
           </button>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- MODAL AVALIAÇÃO DE PRODUTO -->
-  <div class="modal fade" id="reviewModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content bg-dark text-white p-3 rounded-4 modal-premium">
-        <div class="d-flex justify-content-between align-items-start gap-3">
-          <div>
-            <h5 class="fw-bold mb-1">Avaliar Produto</h5>
-            <div class="text-muted small" id="reviewProductName">Produto</div>
+    <!-- MODAL SALÁRIO -->
+    <div class="modal fade" id="salaryModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark text-white p-3 rounded-4 modal-premium">
+          <h5 class="fw-bold mb-3" id="salaryModalTitle">Adicionar salário</h5>
+
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label text-muted">Competência (ex.: 02/2026)</label>
+              <input id="inpSalCompet" class="form-control" placeholder="MM/AAAA">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label text-muted">Valor (R$)</label>
+              <input id="inpSalValue" type="number" step="0.01" class="form-control" placeholder="0.00">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label text-muted">Pago em</label>
+              <input id="inpSalPaidOn" class="form-control" placeholder="DD/MM/AAAA">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label text-muted">Status</label>
+              <select id="inpSalStatus" class="form-select">
+                <option value="PAGO">PAGO</option>
+                <option value="PENDENTE">PENDENTE</option>
+              </select>
+            </div>
           </div>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
-        </div>
 
-        <hr style="border-color: rgba(255,255,255,.10); margin: 14px 0;">
+          <input type="hidden" id="inpSalIndex" value="-1">
 
-        <div class="mb-3">
-          <label class="form-label text-muted mb-2">Avaliação</label>
-          <div class="d-flex gap-2 align-items-center">
-            <span id="reviewStar1" style="font-size:2rem; cursor:pointer; color:#666;" onclick="setReviewRating(1)">☆</span>
-            <span id="reviewStar2" style="font-size:2rem; cursor:pointer; color:#666;" onclick="setReviewRating(2)">☆</span>
-            <span id="reviewStar3" style="font-size:2rem; cursor:pointer; color:#666;" onclick="setReviewRating(3)">☆</span>
-            <span id="reviewStar4" style="font-size:2rem; cursor:pointer; color:#666;" onclick="setReviewRating(4)">☆</span>
-            <span id="reviewStar5" style="font-size:2rem; cursor:pointer; color:#666;" onclick="setReviewRating(5)">☆</span>
+          <div class="d-flex justify-content-end gap-2 mt-4">
+            <button class="btn btn-outline-light" style="border-radius:12px;" data-bs-dismiss="modal">Cancelar</button>
+            <button class="btn btn-gold btn-anim" style="border-radius:12px;font-weight:900"
+              onclick="saveSalary()">Salvar</button>
           </div>
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label text-muted">Comentário (opcional)</label>
-          <textarea id="reviewText" class="form-control bg-black text-white form-premium" rows="4"
-            placeholder="Deixe seu comentário sobre o produto..."></textarea>
-        </div>
-
-        <div class="d-flex justify-content-end gap-2 mt-4">
-          <button class="btn btn-outline-light" style="border-radius:12px;" data-bs-dismiss="modal">Cancelar</button>
-          <button class="btn btn-gold btn-anim" style="border-radius:12px;font-weight:900"
-            onclick="submitReview()">Enviar Avaliação</button>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- MODAL SUPORTE -->
-  <div class="modal fade" id="supportModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content bg-dark text-white p-3 rounded-4 modal-premium">
-        <div class="d-flex justify-content-between align-items-start gap-3">
-          <div>
-            <h5 class="fw-bold mb-1">Suporte</h5>
-            <div class="text-muted small">Pedido: <span id="supportOrderId">—</span></div>
-            <div class="text-muted small">Produto: <span id="supportOrderName">—</span></div>
+    <!-- MODAL ALUNO -->
+    <div class="modal fade" id="studentModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark text-white p-3 rounded-4 modal-premium">
+          <h5 class="fw-bold mb-3" id="studentModalTitle">Adicionar aluno</h5>
+
+          <div class="row g-3">
+            <div class="col-12">
+              <label class="form-label text-muted">Nome</label>
+              <input id="inpStName" class="form-control" placeholder="Nome do aluno">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label text-muted">Contato (WhatsApp)</label>
+              <input id="inpStPhone" class="form-control" placeholder="(00) 00000-0000">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label text-muted">Plano/Contrato</label>
+              <select id="inpStPlan" class="form-select">
+                <option value="Mensal">Mensal</option>
+                <option value="Trimestral">Trimestral</option>
+                <option value="Anual">Anual</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label text-muted">Status</label>
+              <select id="inpStStatus" class="form-select">
+                <option value="ATIVO">ATIVO</option>
+                <option value="PAUSADO">PAUSADO</option>
+                <option value="ENCERRADO">ENCERRADO</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label text-muted">Valor mensal (R$)</label>
+              <input id="inpStFee" type="number" step="0.01" class="form-control" placeholder="0.00">
+            </div>
+            <div class="col-12">
+              <label class="form-label text-muted">Observações</label>
+              <input id="inpStNote" class="form-control" placeholder="Ex.: 2x na semana, foco em hipertrofia">
+            </div>
           </div>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
-        </div>
 
-        <hr style="border-color: rgba(255,255,255,.10); margin: 14px 0;">
+          <input type="hidden" id="inpStId" value="">
 
-        <div class="mb-3">
-          <label class="form-label text-muted">Assunto</label>
-          <input type="text" class="form-control bg-black text-white form-premium" placeholder="Ex.: Problema com entrega">
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label text-muted">Mensagem</label>
-          <textarea class="form-control bg-black text-white form-premium" rows="5"
-            placeholder="Descreva seu problema ou dúvida..."></textarea>
-        </div>
-
-        <div class="d-flex justify-content-end gap-2 mt-4">
-          <button class="btn btn-outline-light" style="border-radius:12px;" data-bs-dismiss="modal">Cancelar</button>
-          <button class="btn btn-gold btn-anim" style="border-radius:12px;font-weight:900"
-            onclick="alert('Mensagem enviada! Entraremos em contato em breve.')">Enviar</button>
+          <div class="d-flex justify-content-between align-items-center gap-2 mt-4">
+            <button class="btn btn-outline-light" style="border-radius:12px;" data-bs-dismiss="modal">Cancelar</button>
+            <button class="btn btn-gold btn-anim" style="border-radius:12px;font-weight:900"
+              onclick="saveStudent()">Salvar</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="./js/perfilProfissional.js"></script>
+    <!-- MODAL EVENTO (AGENDA) -->
+    <div class="modal fade" id="eventModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark text-white p-3 rounded-4 modal-premium">
+          <h5 class="fw-bold mb-3" id="eventModalTitle">Agendar horário</h5>
+
+          <div class="row g-3">
+            <div class="col-12">
+              <label class="form-label text-muted">Aluno</label>
+              <select id="inpEvStudentId" class="form-select"></select>
+              <div class="text-muted small mt-1">Se não aparecer, adicione o aluno primeiro.</div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label text-muted">Data</label>
+              <input id="inpEvDate" type="date" class="form-control">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label text-muted">Hora</label>
+              <input id="inpEvTime" class="form-control" placeholder="HH:MM" inputmode="numeric" maxlength="5"
+                autocomplete="off">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label text-muted">Tipo</label>
+              <select id="inpEvType" class="form-select">
+                <option value="PERSONAL">PERSONAL</option>
+                <option value="AVALIAÇÃO">AVALIAÇÃO</option>
+                <option value="AULA">AULA</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label text-muted">Local</label>
+              <input id="inpEvPlace" class="form-control" placeholder="Ex.: Sala 2 / Box">
+            </div>
+            <div class="col-12">
+              <label class="form-label text-muted">Observação</label>
+              <input id="inpEvNote" class="form-control" placeholder="Ex.: treino A, posterior, mobilidade...">
+            </div>
+          </div>
+
+          <input type="hidden" id="inpEvId" value="">
+
+          <div class="d-flex justify-content-between align-items-center gap-2 mt-4">
+            <button class="btn btn-outline-light" style="border-radius:12px;" data-bs-dismiss="modal">Cancelar</button>
+            <div class="d-flex gap-2">
+              <button class="icon-btn btn-anim btn-remove-event" onclick="deleteEvent()" aria-label="Remover">
+                <i class="bi bi-trash3 me-2"></i><span class="btn-remove-text">REMOVER</span>
+              </button>
+              <button class="btn btn-gold btn-anim" style="border-radius:12px;font-weight:900" onclick="saveEvent()">
+                <i class="bi bi-check2 me-2"></i>SALVAR
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL NOTA FISCAL -->
+    <div class="modal fade" id="invoiceModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark text-white p-3 rounded-4 modal-premium">
+          <div class="d-flex justify-content-between align-items-start gap-3">
+            <div>
+              <h5 class="fw-bold mb-1">Nota Fiscal (Fake)</h5>
+              <div class="text-muted small" id="invSubtitle">Pedido —</div>
+            </div>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+
+          <hr style="border-color: rgba(255,255,255,.10); margin: 14px 0;">
+
+          <div id="invBody" class="small"></div>
+
+          <div class="d-flex justify-content-end gap-2 mt-4">
+            <button class="btn btn-outline-light" style="border-radius:12px;" data-bs-dismiss="modal">Fechar</button>
+            <button class="btn btn-gold btn-anim" style="border-radius:12px;font-weight:900"
+              onclick="alert('Baixando PDF...')">Baixar PDF</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL RASTREIO -->
+    <div class="modal fade" id="trackingModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark text-white p-3 rounded-4 modal-premium">
+          <div class="d-flex justify-content-between align-items-start gap-3">
+            <div>
+              <h5 class="fw-bold mb-1">Rastreio do pedido</h5>
+              <div class="text-muted small" id="trackingSubtitle">Simule as etapas de entrega.</div>
+            </div>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+
+          <hr style="border-color: rgba(255,255,255,.10); margin: 14px 0;">
+          <div id="trackingBody"></div>
+
+          <div class="d-flex justify-content-between align-items-center gap-2 mt-4 flex-wrap">
+            <button class="btn btn-outline-light" style="border-radius:12px;" type="button"
+              onclick="trackingPrevStep()">
+              Voltar etapa
+            </button>
+            <button class="btn btn-gold btn-anim" style="border-radius:12px;font-weight:900" type="button"
+              onclick="trackingNextStep()">
+              Avançar etapa
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL AVALIAÇÃO DE PRODUTO -->
+    <div class="modal fade" id="reviewModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark text-white p-3 rounded-4 modal-premium">
+          <div class="d-flex justify-content-between align-items-start gap-3">
+            <div>
+              <h5 class="fw-bold mb-1">Avaliar Produto</h5>
+              <div class="text-muted small" id="reviewProductName">Produto</div>
+            </div>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+
+          <hr style="border-color: rgba(255,255,255,.10); margin: 14px 0;">
+
+          <div class="mb-3">
+            <label class="form-label text-muted mb-2">Avaliação</label>
+            <div class="d-flex gap-2 align-items-center">
+              <span id="reviewStar1" style="font-size:2rem; cursor:pointer; color:#666;"
+                onclick="setReviewRating(1)">☆</span>
+              <span id="reviewStar2" style="font-size:2rem; cursor:pointer; color:#666;"
+                onclick="setReviewRating(2)">☆</span>
+              <span id="reviewStar3" style="font-size:2rem; cursor:pointer; color:#666;"
+                onclick="setReviewRating(3)">☆</span>
+              <span id="reviewStar4" style="font-size:2rem; cursor:pointer; color:#666;"
+                onclick="setReviewRating(4)">☆</span>
+              <span id="reviewStar5" style="font-size:2rem; cursor:pointer; color:#666;"
+                onclick="setReviewRating(5)">☆</span>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label text-muted">Comentário (opcional)</label>
+            <textarea id="reviewText" class="form-control bg-black text-white form-premium" rows="4"
+              placeholder="Deixe seu comentário sobre o produto..."></textarea>
+          </div>
+
+          <div class="d-flex justify-content-end gap-2 mt-4">
+            <button class="btn btn-outline-light" style="border-radius:12px;" data-bs-dismiss="modal">Cancelar</button>
+            <button class="btn btn-gold btn-anim" style="border-radius:12px;font-weight:900"
+              onclick="submitReview()">Enviar Avaliação</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL SUPORTE -->
+    <div class="modal fade" id="supportModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark text-white p-3 rounded-4 modal-premium">
+          <div class="d-flex justify-content-between align-items-start gap-3">
+            <div>
+              <h5 class="fw-bold mb-1">Suporte</h5>
+              <div class="text-muted small">Pedido: <span id="supportOrderId">—</span></div>
+              <div class="text-muted small">Produto: <span id="supportOrderName">—</span></div>
+            </div>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+
+          <hr style="border-color: rgba(255,255,255,.10); margin: 14px 0;">
+
+          <div class="mb-3">
+            <label class="form-label text-muted">Assunto</label>
+            <input type="text" class="form-control bg-black text-white form-premium"
+              placeholder="Ex.: Problema com entrega">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label text-muted">Mensagem</label>
+            <textarea class="form-control bg-black text-white form-premium" rows="5"
+              placeholder="Descreva seu problema ou dúvida..."></textarea>
+          </div>
+
+          <div class="d-flex justify-content-end gap-2 mt-4">
+            <button class="btn btn-outline-light" style="border-radius:12px;" data-bs-dismiss="modal">Cancelar</button>
+            <button class="btn btn-gold btn-anim" style="border-radius:12px;font-weight:900"
+              onclick="alert('Mensagem enviada! Entraremos em contato em breve.')">Enviar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================================================== -->
+    <!-- FOOTER -->
+    <!-- ===================================================== -->
+    <footer>
+
+      <div id="rodape-1">
+
+        <div class="holder-1-rodape d-flex flex-column">
+          <a href="./index.html#sobre">Sobre nós
+
+            <img
+              src="https://cdn.prod.website-files.com/67ec66139f8f56d61a1cd4c9/68a4b3ec867a722470f71653_seta-rodape.svg"
+              loading="lazy" alt="" class="seta-link-footer">
+          </a>
+
+          <a href="./matricula.html">Matricule-se
+
+            <img
+              src="https://cdn.prod.website-files.com/67ec66139f8f56d61a1cd4c9/68a4b3ec867a722470f71653_seta-rodape.svg"
+              loading="lazy" alt="" class="seta-link-footer">
+          </a>
+
+          <a href="./index.html#planos">Conheça nossos planos
+
+            <img
+              src="https://cdn.prod.website-files.com/67ec66139f8f56d61a1cd4c9/68a4b3ec867a722470f71653_seta-rodape.svg"
+              loading="lazy" alt="" class="seta-link-footer">
+          </a>
+
+        </div>
+
+        <div class="holder-2-rodape d-flex flex-column">
+          <a href="./index.html#localizacao">Encontre nossa unidade
+
+            <img
+              src="https://cdn.prod.website-files.com/67ec66139f8f56d61a1cd4c9/68a4b3ec867a722470f71653_seta-rodape.svg"
+              loading="lazy" alt="" class="seta-link-footer">
+          </a>
+
+          <a href="./index.html#espaco">Conheça nosso espaço
+
+            <img
+              src="https://cdn.prod.website-files.com/67ec66139f8f56d61a1cd4c9/68a4b3ec867a722470f71653_seta-rodape.svg"
+              loading="lazy" alt="" class="seta-link-footer">
+          </a>
+
+          <a href="./telaProfissionais.html">Nossos profissionais
+
+            <img
+              src="https://cdn.prod.website-files.com/67ec66139f8f56d61a1cd4c9/68a4b3ec867a722470f71653_seta-rodape.svg"
+              loading="lazy" alt="" class="seta-link-footer">
+          </a>
+
+        </div>
+
+        <div class="holder-3-rodape d-flex flex-column">
+          <a href=" ">Termos de uso
+
+            <img
+              src="https://cdn.prod.website-files.com/67ec66139f8f56d61a1cd4c9/68a4b3ec867a722470f71653_seta-rodape.svg"
+              loading="lazy" alt="" class="seta-link-footer">
+          </a>
+
+          <a href=" ">Políticas de privacidade
+
+            <img
+              src="https://cdn.prod.website-files.com/67ec66139f8f56d61a1cd4c9/68a4b3ec867a722470f71653_seta-rodape.svg"
+              loading="lazy" alt="" class="seta-link-footer">
+          </a>
+
+          <a
+            href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJNwgMZMDDsgJRjKhkFNhVJGCJnGLvRNnRfRpmRwHTnKsBPPztsmHmJpczQPmSPHmqFNTNV">Ajuda
+            e suporte
+
+            <img
+              src="https://cdn.prod.website-files.com/67ec66139f8f56d61a1cd4c9/68a4b3ec867a722470f71653_seta-rodape.svg"
+              loading="lazy" alt="" class="seta-link-footer">
+          </a>
+
+        </div>
+
+        <div class="holder-4-rodape d-flex flex-column">
+          <h2>
+            Entre em contato
+          </h2>
+          <button id="botao-fale-conosco" type="button" class="btn btn-primary btn-lg"
+            href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJNwgMZMDDsgJRjKhkFNhVJGCJnGLvRNnRfRpmRwHTnKsBPPztsmHmJpczQPmSPHmqFNTNV">
+
+            Converse com a One...
+            <img
+              src="https://cdn.prod.website-files.com/67ec66139f8f56d61a1cd4c9/68a4b3ec867a722470f71653_seta-rodape.svg"
+              loading="lazy" alt="" ic="seta-link-botao">
+          </button>
+
+        </div>
+
+      </div>
+
+      <div id="rodape-2">
+
+        <div id="titulo-rodape-2">
+          <h2>Visite nossas redes sociais</h2>
+        </div>
+
+        <div class="redes-sociais">
+          <a href="https://www.facebook.com/PanobiancoAcademia" target="_blank" class="link-rede-social w-inline-block">
+            <img src="https://cdn.prod.website-files.com/67ec66139f8f56d61a1cd4c9/68a4b150a5b3f9991bb29f3c_facebook.svg"
+              loading="lazy" alt="" class="logo-rede-social">
+          </a>
+
+          <a href="https://www.instagram.com" target="_blank" class="link-rede-social w-inline-block"><img
+              src="https://cdn.prod.website-files.com/67ec66139f8f56d61a1cd4c9/68a4b15088c80ce64ec8857f_instagram.svg"
+              loading="lazy" alt="" class="logo-rede-social">
+          </a>
+
+          <a href="https://www.linkedin.com" target="_blank" class="link-rede-social w-inline-block"><img
+              src="https://cdn.prod.website-files.com/67ec66139f8f56d61a1cd4c9/68a4b150a55a7b89f0cd9dd8_linkedin.svg"
+              loading="lazy" alt="" class="logo-rede-social">
+          </a>
+
+          <a href="https://www.youtube.com" target="_blank" class="link-rede-social w-inline-block"><img
+              src="https://cdn.prod.website-files.com/67ec66139f8f56d61a1cd4c9/68a4b150270f174faa8c122e_youtube.svg"
+              loading="lazy" alt="" class="logo-rede-social">
+          </a>
+
+          <a href="https://www.tiktok.com" target="_blank" class="link-rede-social w-inline-block"><img
+              src="https://cdn.prod.website-files.com/67ec66139f8f56d61a1cd4c9/68a4b15055cebdf9dbd254c4_tiktok.svg"
+              loading="lazy" alt="" class="logo-rede-social">
+          </a>
+        </div>
+
+        <div class="footer-bottom_separador hide-mb"></div>
+
+        <div class="text-size-tiny">© 2026 &nbsp; Desenvolvido por Ignite Software</div>
+
+      </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/perfilProfissional.js"></script>
 </body>
 
 </html>
