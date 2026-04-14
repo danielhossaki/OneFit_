@@ -45,6 +45,10 @@ color:white;
 
 }
 
+.btnMatricula{
+  color:rgb(134, 53, 180);
+}
+
 /* botao voltar para a home */
 
 .btn-home-wrap {
@@ -177,7 +181,7 @@ cursor:pointer;
 
 opacity:.5;
 
-transition:.3s;
+transition:.2s;
 
 }
 

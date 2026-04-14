@@ -64,8 +64,8 @@ function ensurePixQr() {
   qrEl.innerHTML = "";
   new QRCode(qrEl, {
     text: buildPixPayload(),
-    width: 160,
-    height: 160,
+    width: 130,
+    height: 130,
     correctLevel: QRCode.CorrectLevel.M,
   });
 
