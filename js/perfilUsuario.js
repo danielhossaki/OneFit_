@@ -2931,8 +2931,6 @@ function renderClassSlots() {
     right.className = "d-flex align-items-center gap-2";
 
     const tag = document.createElement("span");
-    tag.className = "tag";
-    tag.textContent = "AULA";
 
     const btn = document.createElement("button");
     btn.type = "button";
@@ -2978,8 +2976,6 @@ function renderAssessSlots() {
     right.className = "d-flex align-items-center gap-2";
 
     const tag = document.createElement("span");
-    tag.className = "tag";
-    tag.textContent = "AVALIAÇÃO";
 
     const btn = document.createElement("button");
     btn.type = "button";

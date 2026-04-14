@@ -683,62 +683,6 @@
      saveLS();
    }
    
-   function openAddSalary(){
-     document.getElementById('salaryModalTitle').textContent = 'Adicionar salário';
-     document.getElementById('inpSalCompet').value = '';
-     document.getElementById('inpSalValue').value = '';
-     document.getElementById('inpSalPaidOn').value = '';
-     document.getElementById('inpSalStatus').value = 'PAGO';
-     document.getElementById('inpSalIndex').value = '-1';
-   }
-   
-   function openEditSalary(index){
-     const s = state.salaries[index];
-     if (!s) return;
-   
-     document.getElementById('salaryModalTitle').textContent = 'Editar salário';
-     document.getElementById('inpSalCompet').value = s.compet || '';
-     document.getElementById('inpSalValue').value = String(s.value ?? '');
-     document.getElementById('inpSalPaidOn').value = s.paidOn || '';
-     document.getElementById('inpSalStatus').value = s.status || 'PAGO';
-     document.getElementById('inpSalIndex').value = String(index);
-   
-     const modalEl = document.getElementById('salaryModal');
-     (bootstrap.Modal.getInstance(modalEl) || new bootstrap.Modal(modalEl)).show();
-   }
-   
-   function saveSalary(){
-     const compet = (document.getElementById('inpSalCompet').value || '').trim();
-     const valRaw = (document.getElementById('inpSalValue').value || '').trim();
-     const paidOn = (document.getElementById('inpSalPaidOn').value || '').trim();
-     const status = (document.getElementById('inpSalStatus').value || 'PAGO').trim();
-     const idxRaw = (document.getElementById('inpSalIndex').value || '-1').trim();
-   
-     if (!compet){
-       alert('Informe a competência (ex.: 03/2026).');
-       return;
-     }
-   
-     const value = Number(valRaw || 0);
-     if (!Number.isFinite(value) || value < 0){
-       alert('Valor inválido.');
-       return;
-     }
-   
-     const obj = { compet, value, paidOn, status };
-     const idx = parseInt(idxRaw, 10);
-   
-     if (!Number.isFinite(idx) || idx < 0){
-       state.salaries.push(obj);
-     } else {
-       state.salaries[idx] = obj;
-     }
-   
-     bootstrap.Modal.getInstance(document.getElementById('salaryModal'))?.hide();
-     renderSalaries();
-     alert('Salário salvo ✅');
-   }
-   
    function removeSalary(index){
      const s = state.salaries[index];
      if (!s) return;

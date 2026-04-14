@@ -396,6 +396,10 @@ color:#c18b00
   opacity:1 !important;
 }
 
+/* .text-muted{
+  color:#fff !important;
+} */
+
 /* Melhorar contraste em telas pequenas */
 @media (max-width: 575.98px){
   .text-muted,
@@ -1363,7 +1367,7 @@ color:#c18b00
 }
 
 .form-premium{
-  border-color:rgba(255,255,255,.12) !important;
+  border-color:rgba(228, 221, 221, 0.12) !important;
   border-radius:12px !important;
 }
 
