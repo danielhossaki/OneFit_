@@ -3,31 +3,31 @@ const profissionais = [
     nome: "Bruno Martins",
     area: "Professor de Funcional",
     img: "../img/professor-funcional.png",
-    desc: "Especialista em hipertrofia e emagrecimento com 8 anos de experiência.  CREF: 123456-G/SP"
+    desc: "Especialista em treinos funcionais focados em emagrecimento, resistência e condicionamento físico. Com mais de 8 anos de experiência, trabalha com aulas dinâmicas e personalizadas. CREF: 123456-G/SP"
   },
   {
     nome: "Ricardo Souza",
     area: "Nutricionista",
     img: "../img/nutricionista.png",
-    desc: "Foco em dieta esportiva e performance de atletas. CRN: 123456"
+   desc: "Nutricionista esportivo com foco em performance, hipertrofia e reeducação alimentar. Elabora dietas personalizadas de acordo com os objetivos de cada aluno. CRN: 123456"
   },
   {
-    nome: "Lucas Ferreira",
-    area: "Instrutor Funcional",
-    img: "https://randomuser.me/api/portraits/men/55.jpg",
-    desc: "Treinos dinâmicos para resistência e condicionamento físico."
+    nome: "Fernanda Alves",
+    area: "Professora de dança",
+    img: "../img/professora_dança.png",
+    desc: "Professora de dança com aulas voltadas para queima calórica, coordenação e bem-estar. Trabalha com ritmos variados e treinos animados para todos os níveis. CREF: 123456-G/SP"
   },
   {
-    nome: "Ana Costa",
-    area: "Personal Trainer",
-    img: "https://randomuser.me/api/portraits/women/68.jpg",
-    desc: "Especialista em treino feminino e definição muscular."
+    nome: "Patricia Gomes",
+    area: "Instrutora de Pilates",
+    img: "../img/professora-pilates.png",
+   desc: "Instrutora de Pilates especializada em fortalecimento muscular, postura e alongamento. Atua na prevenção de lesões e melhoria da qualidade de vida. CREF: 123456-G/SP"
   },
   {
-    nome: "Rafael Mendes",
-    area: "Fisioterapeuta",
-    img: "https://randomuser.me/api/portraits/men/77.jpg",
-    desc: "Reabilitação esportiva e prevenção de lesões."
+    nome: "Juliana Rocha",
+    area: "Instrutora de Musculação",
+    img: "../img/instrutura-de-musculacao.png",
+    desc: "Instrutora de musculação com foco em hipertrofia, definição e ganho de força. Monta treinos personalizados para iniciantes e avançados. CREF: 123456-G/SP"
   }
 ];
 function irHome() {
