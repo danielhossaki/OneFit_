@@ -1281,107 +1281,47 @@ font-size: 40px !important;
 
 }
 
-
-/* ========================= FOOTER ========================= */
-#rodape-1 {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 40px 60px;
-  background: rgba(11, 11, 11, .55);
-  backdrop-filter: blur(10px);
-  flex-wrap: wrap; /* ajuda no mobile */
-}
-
-#rodape-1 > div {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-/* logo */
-.holder-1-rodape img {
-  width: 120px;
-}
-
-.redes-sociais img{
-  width: 30px;
-}
-
-/* links */
-#rodape-1 a {
-  display: inline-flex; /* em vez de block ou 100% */
-  align-items: center;
-  gap: 6px; /* espaço entre texto e ícone */
-
-  width: fit-content; /* garante que só vai até o conteúdo */
-
-  color: #fff;
-  text-decoration: none;
-  font-size: 14px;
-  transition: all 0.25s ease;
-  padding: 4px 8px;
-  border-radius: 4px;
-}
-
-#rodape-1 a:hover {
-  background-color: #fff;
-  color: #000;
-  font-weight: 600;
-}
-
-.parte-de-cima h2{
-  text-align: center;
-  font-weight:800;
-}
-
-#rodape-2 {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background: rgba(11, 11, 11, 0.863);
-  backdrop-filter: blur(40px);
-  flex-wrap: wrap; /* ajuda no mobile */
-}
-
-.redes-sociais {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  gap: 6px; /* diminui o espaço entre os ícones */
-  margin-top: 10px;
-}
-
-.redes-sociais a {
+/* =============== BOTAO DO WHATSAPP FIXO ============== */
+#whatsapp-btn {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  padding: 6px;
-  border-radius: 50%;
-  transition: 0.25s;
+  background-color:#025e27;
+  box-shadow: 0 0px 40px #03df549a;
+  z-index: 9999;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* ícones */
-.redes-sociais img {
-  width: 30px;
-  height: 30px;
-  transition: 0.25s;
+#whatsapp-logo {
+  width: 32px;
+  height: 32px;
 }
 
-/* hover */
-.redes-sociais a:hover {
-  background-color: #fff;
-  border-radius: 0.5rem !important;
+#whatsapp-btn:hover {
+  transform: scale(1.5);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
 }
 
-/* deixa o ícone preto no hover */
-.redes-sociais a:hover img {
-  filter: brightness(0);
-}
+/* 📱 Responsivo */
+@media (max-width: 768px) {
+  #whatsapp-btn {
+    width: 60px;
+    height: 60px;
+    bottom: 90px;
+    right: 30px;
+  }
 
+  #whatsapp-logo {
+    width: 26px;
+    height: 26px;
+  }
+}
 
 
 
