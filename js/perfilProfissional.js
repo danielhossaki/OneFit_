@@ -38,6 +38,8 @@
        { id: uid(), name: 'Ana Paula', phone: '(11) 99999-1111', plan: 'Mensal', status: 'ATIVO', fee: 250.00, note: '2x/semana' },
        { id: uid(), name: 'Bruno Silva', phone: '(11) 98888-2222', plan: 'Trimestral', status: 'ATIVO', fee: 220.00, note: 'Foco emagrecimento' }
      ],
+     studentsPage: 1,
+     agendaPage: 1,
    
      agenda: {
        events: [
@@ -96,6 +98,7 @@
          "view-carga":    { title:"Carga horária", sub:"Horas do mês e detalhamento." },
          "view-ponto":    { title:"Cartão de ponto", sub:"Bata entrada/saída e acompanhe registros." },
          "view-salarios": { title:"Salários", sub:"Histórico de pagamentos de salário." },
+         "view-alunos":   { title:"Alunos", sub:"Alunos cadastrados, status e planos." },
          "view-agenda":   { title:"Minha agenda", sub:"Agenda particular com alunos: adicionar, editar ou remover (agora em lista)." },
          "view-cashback": { title:"Meu cashback", sub:"Saldo, meta e extrato." },
          "view-compras":  { title:"Minhas compras", sub:"Acompanhe pedidos, entregas e pós-venda dos seus pedidos." }
@@ -288,7 +291,8 @@
      if (viewId === 'view-carga') setTimeout(renderHours, 60);
      if (viewId === 'view-ponto') setTimeout(renderPonto, 60);
      if (viewId === 'view-salarios') setTimeout(renderSalaries, 60);
-     if (viewId === 'view-agenda') setTimeout(() => { renderStudents(); renderAgendaList(); }, 60);
+     if (viewId === 'view-alunos') setTimeout(() => { renderStudents(); }, 60);
+     if (viewId === 'view-agenda') setTimeout(() => { renderAgendaList(); }, 60);
      if (viewId === 'view-cashback') setTimeout(renderProCashback, 60);
      if (viewId === 'view-compras') setTimeout(renderOrders, 60);
    }
@@ -788,19 +792,34 @@
    function renderStudents(){
      const box = document.getElementById('studentsList');
      const count = document.getElementById('studentsCount');
+     const paginator = document.getElementById('studentsPaginator');
      if (!box || !count) return;
    
      const q = (document.getElementById('agendaFilter')?.value || '').trim().toLowerCase();
      const filtered = (state.students || []).filter(s => !q || (s.name || '').toLowerCase().includes(q));
    
-     count.textContent = String((state.students || []).filter(s => s.status === 'ATIVO').length);
+     const total = (state.students || []).length;
+     const ativos = (state.students || []).filter(s => s.status === 'ATIVO').length;
+     count.textContent = `${ativos} / ${total}`;
    
-     if (!filtered.length){
-       box.innerHTML = `<div class="text-muted small">Nenhum aluno no filtro.</div>`;
+     const perPage = 5;
+     const totalPages = Math.ceil(filtered.length / perPage);
+     let page = state.studentsPage || 1;
+     if (page > totalPages) page = totalPages;
+     if (page < 1) page = 1;
+     state.studentsPage = page;
+   
+     const start = (page - 1) * perPage;
+     const end = start + perPage;
+     const pageItems = filtered.slice(start, end);
+   
+     if (!pageItems.length){
+       box.innerHTML = `<div class="text-muted small">Nenhum aluno nesta página.</div>`;
+       if (paginator) paginator.innerHTML = '';
        return;
      }
    
-     box.innerHTML = filtered.map(s => `
+     box.innerHTML = pageItems.map(s => `
        <div class="slot" style="padding:10px 12px;">
          <div class="left">
            <strong>${escHtml(s.name)}</strong>
@@ -817,7 +836,28 @@
        </div>
      `).join('');
    
+     // Render paginator
+     let pagHtml = '';
+     if (totalPages > 1) {
+       pagHtml += `<button class="btn btn-sm btn-outline-light me-1" onclick="setStudentsPage(${page - 1})" ${page === 1 ? 'disabled' : ''}><i class="bi bi-chevron-left"></i></button>`;
+       for (let i = 1; i <= totalPages; i++) {
+         pagHtml += `<button class="btn btn-sm ${i === page ? 'btn-gold' : 'btn-outline-light'} me-1" onclick="setStudentsPage(${i})">${i}</button>`;
+       }
+       pagHtml += `<button class="btn btn-sm btn-outline-light" onclick="setStudentsPage(${page + 1})" ${page === totalPages ? 'disabled' : ''}><i class="bi bi-chevron-right"></i></button>`;
+     }
+     if (paginator) paginator.innerHTML = pagHtml;
+   
      bindRipple();
+   }
+   
+   function setStudentsPage(page) {
+     state.studentsPage = page;
+     renderStudents();
+   }
+   
+   function setAgendaPage(page) {
+     state.agendaPage = page;
+     renderAgendaList();
    }
    
    /* =========================
@@ -1021,6 +1061,7 @@ function bindEventTimeMask(){
    function renderAgendaList(){
      const root = document.getElementById('agendaList');
      const label = document.getElementById('agendaMonthLabel');
+     const paginator = document.getElementById('agendaPaginator');
      if (!root || !label) return;
    
      const cursor = new Date(state.ui.monthCursor.getFullYear(), state.ui.monthCursor.getMonth(), 1);
@@ -1028,9 +1069,11 @@ function bindEventTimeMask(){
    
      const { from, to } = monthRangeISO(cursor);
      const set = getFilteredStudentSet();
+     const dateFilter = (document.getElementById('agendaDateFilter')?.value || '').trim();
    
      const events = (state.agenda.events || [])
        .filter(ev => ev?.dateISO && ev.dateISO >= from && ev.dateISO <= to)
+       .filter(ev => !dateFilter || ev.dateISO === dateFilter)
        .filter(ev => {
          if (!set) return true;
          if (!ev.studentId) return true;
@@ -1044,12 +1087,24 @@ function bindEventTimeMask(){
        });
    
      if (!events.length){
-       root.innerHTML = `<div class="text-muted">Nenhum evento neste mês (com o filtro atual).</div>`;
+       root.innerHTML = `<div class="text-muted">Nenhum evento neste mês.</div>`;
+       if (paginator) paginator.innerHTML = '';
        return;
      }
    
+     const perPage = 5;
+     const totalPages = Math.ceil(events.length / perPage);
+     let page = state.agendaPage || 1;
+     if (page > totalPages) page = totalPages;
+     if (page < 1) page = 1;
+     state.agendaPage = page;
+   
+     const start = (page - 1) * perPage;
+     const end = start + perPage;
+     const pageEvents = events.slice(start, end);
+   
      const map = new Map();
-     events.forEach(ev => {
+     pageEvents.forEach(ev => {
        if (!map.has(ev.dateISO)) map.set(ev.dateISO, []);
        map.get(ev.dateISO).push(ev);
      });
@@ -1100,6 +1155,17 @@ function bindEventTimeMask(){
          </div>
        `;
      }).join('');
+   
+     // Render paginator
+     let pagHtml = '';
+     if (totalPages > 1) {
+       pagHtml += `<button class="btn btn-sm btn-outline-light me-1" onclick="setAgendaPage(${page - 1})" ${page === 1 ? 'disabled' : ''}><i class="bi bi-chevron-left"></i></button>`;
+       for (let i = 1; i <= totalPages; i++) {
+         pagHtml += `<button class="btn btn-sm ${i === page ? 'btn-gold' : 'btn-outline-light'} me-1" onclick="setAgendaPage(${i})">${i}</button>`;
+       }
+       pagHtml += `<button class="btn btn-sm btn-outline-light" onclick="setAgendaPage(${page + 1})" ${page === totalPages ? 'disabled' : ''}><i class="bi bi-chevron-right"></i></button>`;
+     }
+     if (paginator) paginator.innerHTML = pagHtml;
    
      bindRipple();
      saveLS();
@@ -1309,6 +1375,7 @@ function bindEventTimeMask(){
    function renderOrders(){
      const list = document.getElementById('ordersList');
      const total = document.getElementById('ordersCount');
+     const totalNum = document.getElementById('ordersCountNum');
      if (!list || !total) return;
 
     const all = loadSharedOrders();
@@ -1322,6 +1389,7 @@ function bindEventTimeMask(){
      });
    
      total.textContent = `${arr.length} ${arr.length === 1 ? 'pedido' : 'pedidos'}`;
+     if (totalNum) totalNum.textContent = arr.length;
    
      if (!arr.length){
        list.innerHTML = `
@@ -1749,7 +1817,13 @@ function bindEventTimeMask(){
   bindEventTimeMask();
    
      document.getElementById('agendaFilter')?.addEventListener('input', () => {
+       state.studentsPage = 1;
        renderStudents();
+       renderAgendaList();
+     });
+
+     document.getElementById('agendaDateFilter')?.addEventListener('change', () => {
+       state.agendaPage = 1;
        renderAgendaList();
      });
    
