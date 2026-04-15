@@ -82,7 +82,7 @@ color:white;
   position: absolute;
   inset: 2px;
 
-  background: black;
+  background: rgb(17, 17, 17);
   border-radius: 18px;
 
   z-index: -1;
@@ -109,7 +109,7 @@ color:white;
 
 .btn-home:hover {
   background: rgb(245, 180, 0);
-  color: black;
+  color: rgb(22, 22, 22);
   border-color: rgb(245, 180, 0);
 }
 
