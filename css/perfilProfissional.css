@@ -13,7 +13,7 @@
   
   body{
     font-family:'Montserrat', sans-serif;
-    color:#fff;
+    color:#f7f2f2;
     min-height:100vh;
     margin:0;
     background:
@@ -281,7 +281,7 @@
 
   .offcanvas-premium{
     background: rgba(10,10,10,.92);
-    color:#fff;
+    color:#f7f2f2;
     border-right: 1px solid rgba(255,255,255,.08);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
@@ -407,7 +407,7 @@
   
   .form-control, .form-select{
     background: #000 !important;
-    color: #fff !important;
+    color: #f7f2f2 !important;
     border-color: rgba(255,255,255,.12) !important;
     border-radius: 12px !important;
   }
