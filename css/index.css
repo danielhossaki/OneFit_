@@ -21,7 +21,7 @@ html {
 
 body {
   font-family: 'Montserrat', sans-serif;
-  color: #ffffffbb;
+  color: #f7f2f2bb;
   min-height: 100vh;
   margin: 0;
 
@@ -120,7 +120,7 @@ body {
 }
 
 .navbar .nav-link:hover {
-  color: #fff;
+  color: #f7f2f2;
 }
 
 .navbar .nav-link.active {
@@ -186,7 +186,7 @@ body {
 .texto_login {
   display: none;
   font-weight: 600;
-  color: white;
+  color: #f7f2f2;
   font-size: 0.9rem;
 }
 
@@ -324,7 +324,7 @@ body {
   letter-spacing: -1px;
 
   /* Gradiente Premium: Branco com um toque de Ouro */
-  background: linear-gradient(135deg, #ffffff 30%, #94700d5e 100%);
+  background: linear-gradient(135deg, #f7f2f2 30%, #94700d5e 100%);
 
   -webkit-background-clip: text;
   background-clip: text;
@@ -402,7 +402,7 @@ body {
   padding: 25px;
   border-radius: 20px;
 
-  color: white;
+  color: #f7f2f2;
   background: rgba(20, 20, 20, 0.096);
   backdrop-filter: blur(15px);
   border: 1px solid rgba(245, 180, 0, 0.25);
@@ -610,7 +610,7 @@ body {
 
 
   /* Gradiente Premium: Branco com um toque de Ouro */
-  background: linear-gradient(135deg, #ffffff 30%, #94700d5e 100%);
+  background: linear-gradient(135deg, #f7f2f2 30%, #94700d5e 100%);
 
   -webkit-background-clip: text;
   background-clip: text;
@@ -693,7 +693,7 @@ body {
   padding: 25px;
   border-radius: 20px;
 
-  color: white;
+  color: #f7f2f2;
 
   /* GLASS */
   background: rgba(20, 20, 20, 0.08);
@@ -846,7 +846,7 @@ body {
 
 .funcao-profissional {
   margin: 0 auto;
-  color: white;
+  color: #f7f2f2;
 }
 
 .btn-whatsapp {
@@ -861,7 +861,7 @@ body {
   font-weight: 700;
 
   text-decoration: none;
-  color: white;
+  color: #f7f2f2;
 
   background: linear-gradient(135deg, #25d366, #1ebe5d);
 
@@ -934,7 +934,7 @@ body {
 
 
   /* Gradiente Premium: Branco com um toque de Ouro */
-  background: linear-gradient(135deg, #ffffff 30%, #94700d5e 100%);
+  background: linear-gradient(135deg, #f7f2f2 30%, #94700d5e 100%);
 
   -webkit-background-clip: text;
   background-clip: text;
@@ -1020,7 +1020,7 @@ body {
   letter-spacing: -1px;
 
   /* Gradiente Premium: Branco com um toque de Ouro */
-  background: linear-gradient(135deg, #ffffff 30%, #94700d5e 100%);
+  background: linear-gradient(135deg, #f7f2f2 30%, #94700d5e 100%);
 
   -webkit-background-clip: text;
   background-clip: text;
@@ -1146,7 +1146,7 @@ font-size: 40px !important;
   letter-spacing: -1px;
 
   /* Gradiente Premium: Branco com um toque de Ouro */
-  background: linear-gradient(135deg, #ffffff9e 30%, #ffd95a 100%);
+  background: linear-gradient(135deg, #f7f2f29e 30%, #ffd95a 100%);
 
   -webkit-background-clip: text;
   background-clip: text;
@@ -1197,7 +1197,7 @@ font-size: 40px !important;
 #localizacao {
   padding: 4rem 0 3px;
   text-align: center;
-  color: white;
+  color: #f7f2f2;
 
   scroll-margin-top: 88px;
 
@@ -1220,7 +1220,7 @@ font-size: 40px !important;
   letter-spacing: -1px;
 
   /* Gradiente Premium: Branco com um toque de Ouro */
-  background: linear-gradient(135deg, #ffffff 30%, #94700d5e 100%);
+  background: linear-gradient(135deg, #f7f2f2 30%, #94700d5e 100%);
 
   -webkit-background-clip: text;
   background-clip: text;
@@ -1263,7 +1263,7 @@ font-size: 40px !important;
 
   overflow: hidden;
 
-  border: 2px solid #fff;
+  border: 2px solid #f7f2f2;
 
   box-shadow:
     0 0 20px rgba(255,255,255,0.2);
@@ -1286,27 +1286,54 @@ font-size: 40px !important;
   position: fixed;
   bottom: 50px;
   right: 50px;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+  width: 70px;
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color:#025e27;
-  box-shadow: 0 0px 40px #03df549a;
   z-index: 9999;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 #whatsapp-logo {
-  width: 32px;
-  height: 32px;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0px 30px #028f35c0;
+  border-radius: 50%;
 }
 
 #whatsapp-btn:hover {
-  transform: scale(1.5);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+  transform: scale(1.1);
 }
+
+/* faixa lateral */
+#whatsapp-btn::after {
+  content: "Fale conosco pelo WhatsApp!";
+  position: absolute;
+  right: 85px;
+  top: 50%;
+  transform: translateY(-50%) translateX(20px);
+  background-color: #025e27;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 0px 20px #028f35c0;
+}
+
+#whatsapp-btn:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%) translateX(0);
+  rotate: 5rem;
+}
+
+
 
 /* 📱 Responsivo */
 @media (max-width: 768px) {
@@ -1318,8 +1345,14 @@ font-size: 40px !important;
   }
 
   #whatsapp-logo {
-    width: 26px;
-    height: 26px;
+    width: 100%;
+    height: 100%;
+  }
+
+  #whatsapp-btn::after {
+    right: 75px;
+    font-size: 12px;
+    padding: 8px 14px;
   }
 }
 
