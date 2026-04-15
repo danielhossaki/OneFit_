@@ -68,14 +68,6 @@
             </div>
           </button>
 
-          <button class="nav-itemx" data-view="view-contrato">
-            <div class="nav-ico"><i class="bi bi-file-earmark-text"></i></div>
-            <div class="nav-txt">
-              <div class="t">Contrato</div>
-              <div class="s">Status com a academia</div>
-            </div>
-          </button>
-
           <button class="nav-itemx" data-view="view-carga">
             <div class="nav-ico"><i class="bi bi-clock-history"></i></div>
             <div class="nav-txt">
@@ -100,11 +92,19 @@
             </div>
           </button>
 
+          <button class="nav-itemx" data-view="view-alunos">
+            <div class="nav-ico"><i class="bi bi-list-check"></i></div>
+            <div class="nav-txt">
+              <div class="t">Alunos</div>
+              <div class="s">Alunos e horários</div>
+            </div>
+          </button>
+
           <button class="nav-itemx" data-view="view-agenda">
             <div class="nav-ico"><i class="bi bi-list-check"></i></div>
             <div class="nav-txt">
               <div class="t">Minha agenda</div>
-              <div class="s">Alunos e horários</div>
+              <div class="s">Horários de aulas</div>
             </div>
           </button>
 
@@ -144,7 +144,7 @@
 
           <div class="card p-4 js-stagger mt-3">
             <div class="row g-3">
-              <div class="col-lg-4">
+              <div class="col-12 col-md-6 col-lg-4">
                 <div class="kpi-mini">
                   <div class="lab">Contrato</div>
                   <div class="num" id="kpiContrato">Ativo</div>
@@ -153,7 +153,7 @@
                 </div>
               </div>
 
-              <div class="col-lg-4">
+              <div class="col-12 col-md-6 col-lg-4">
                 <div class="kpi-mini">
                   <div class="lab">Horas (mês)</div>
                   <div class="num"><span id="kpiHoras">0</span>h</div>
@@ -162,7 +162,7 @@
                 </div>
               </div>
 
-              <div class="col-lg-4">
+              <div class="col-12 col-md-6 col-lg-4">
                 <div class="kpi-mini">
                   <div class="lab">Cashback</div>
                   <div class="num">R$ <span id="kpiCashback">0,00</span></div>
@@ -174,14 +174,14 @@
             <hr class="hr-soft">
 
             <div class="row g-3">
-              <div class="col-lg-6">
+              <div class="col-12 col-lg-6">
                 <div class="kpi-mini">
                   <div class="lab">Próximo horário</div>
                   <div class="num num-sm" id="kpiNextSlot">—</div>
                   <div class="sub">Agenda particular</div>
                 </div>
               </div>
-              <div class="col-lg-6">
+              <div class="col-12 col-lg-6">
                 <div class="kpi-mini">
                   <div class="lab">Último ponto</div>
                   <div class="num num-sm" id="kpiLastPunch">—</div>
@@ -243,21 +243,6 @@
                   <div class="sub">No mês atual</div>
                 </div>
               </div>
-              <div class="col-md-4">
-                <div class="kpi-mini">
-                  <div class="lab">Meta</div>
-                  <div class="num"><span id="hoursGoal">0</span>h</div>
-                  <div class="sub">Contrato</div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="kpi-mini">
-                  <div class="lab">Progresso</div>
-                  <div class="num"><span id="hoursPct">0</span>%</div>
-                  <div class="sub">Atingimento</div>
-                  <div class="bar"><i id="hoursBar"></i></div>
-                </div>
-              </div>
             </div>
 
             <hr class="hr-soft">
@@ -284,20 +269,10 @@
             <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-2">
               <div>
                 <h6 class="fw-bold section-title mb-1">Cartão de ponto</h6>
-                <p class="text-muted mb-0">Insira suas entradas e saídas.</p>
+                <p class="text-muted mb-0">Histórico de entradas e saídas.</p>
               </div>
 
-              <div class="d-flex gap-2 flex-wrap">
-                <button id="btnPunchIn" class="btn btn-gold btn-anim h44 px-3" onclick="punch('IN')">
-                  <i class="bi bi-box-arrow-in-right me-2"></i>ENTRADA
-                </button>
-                <button id="btnPunchOut" class="btn btn-gold btn-anim h44 px-3" onclick="punch('OUT')">
-                  <i class="bi bi-box-arrow-right me-2"></i>SAÍDA
-                </button>
-                <button class="icon-btn btn-anim" onclick="clearPunches()">
-                  <i class="bi bi-trash3 me-2"></i>LIMPAR
-                </button>
-              </div>
+
             </div>
 
             <div class="row g-3">
@@ -326,7 +301,6 @@
                     <th>Data</th>
                     <th>Tipo</th>
                     <th>Horário</th>
-                    <th>Obs.</th>
                   </tr>
                 </thead>
                 <tbody id="punchesTbody"></tbody>
@@ -341,7 +315,7 @@
             <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-2">
               <div>
                 <h6 class="fw-bold section-title mb-1">Histórico de salários</h6>
-                <p class="text-muted mb-0">Lance seus ganhos mensais.</p>
+                <p class="text-muted mb-0">Ganhos mensais.</p>
               </div>
 
               <div class="d-flex gap-2 flex-wrap">
@@ -369,12 +343,12 @@
           </div>
         </section>
 
-        <!-- AGENDA PARTICULAR (LISTA) -->
-        <section class="view" id="view-agenda">
+        <!-- ALUNOS (LISTA) -->
+        <section class="view" id="view-alunos">
           <div class="card p-4 js-stagger">
             <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-2">
               <div>
-                <h6 class="fw-bold section-title mb-0">Minha agenda (particular)</h6>
+                <h6 class="fw-bold section-title mb-0">Alunos (particular)</h6>
                 <div class="text-muted small mt-1">Alunos/contratos e horários agendados.</div>
               </div>
 
@@ -383,7 +357,55 @@
                   onclick="openAddStudent()">
                   <i class="bi bi-person-plus me-2"></i>+ ALUNO
                 </button>
+              </div>
+            </div>
 
+            <div class="row g-3 mb-3">
+              <div class="col-12 col-md-3">
+                <div class="d-flex align-items-center gap-2">
+                  <div class="badge-pill">
+                    <span>Alunos:</span>
+                    <b id="studentsCount">0 / 0</b>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-9">
+                <input id="agendaFilter" class="form-control" placeholder="Buscar aluno (nome)">
+              </div>
+            </div>
+
+            <div class="row g-3">
+              <div class="col-12">
+                <div class="agenda-list-head">
+                  <div>
+                    <div class="agenda-title">Alunos cadastrados</div>
+                    <div class="text-muted small">Lista de alunos ativos e contratos</div>
+                  </div>
+                </div>
+
+                <div id="studentsList" class="mt-2"></div>
+
+                <div id="studentsPaginator" class="mt-3 d-flex justify-content-center"></div>
+
+                <div class="mt-3 text-muted small">
+                  Dica: clique em "+ ALUNO" para adicionar novo.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+                <!-- MINHA AGENDA (LISTA) -->
+        <section class="view" id="view-agenda">
+          <div class="card p-4 js-stagger">
+            <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-2">
+              <div>
+                <h6 class="fw-bold section-title mb-0">Minha agenda (particular)</h6>
+                <div class="text-muted small mt-1">Alunos e horários agendados.</div>
+              </div>
+
+              <div class="d-flex align-items-center gap-2 flex-wrap">
                 <div class="agenda-month-nav"
                   style="display:grid;grid-template-columns:38px minmax(0,1fr) 38px;align-items:center;gap:.5rem;">
                   <button class="btn btn-gold btn-anim btn-square" style="width:38px;height:38px;padding:0;"
@@ -407,27 +429,14 @@
               </div>
             </div>
 
-            <div class="row g-3 mt-1">
-              <div class="col-lg-4">
-                <div class="kpi-mini">
-                  <div class="lab">Alunos ativos</div>
-                  <div class="num" id="studentsCount">0</div>
-                  <div class="sub">Contratos em andamento</div>
-                </div>
-
-                <div class="kpi-mini mt-3">
-                  <div class="lab">Filtrar</div>
-                  <input id="agendaFilter" class="form-control" placeholder="Buscar aluno (nome)">
-                  <div class="text-muted small mt-2">A lista e os eventos respeitam o filtro.</div>
-                </div>
-
-                <div class="kpi-mini mt-3">
-                  <div class="lab">Alunos (lista)</div>
-                  <div id="studentsList" class="mt-2"></div>
-                </div>
+            <div class="row g-3 mb-3">
+              <div class="col-12 col-md-6">
+                <input type="date" id="agendaDateFilter" class="form-control" placeholder="Filtrar por data">
               </div>
+            </div>
 
-              <div class="col-lg-8">
+            <div class="row g-3">
+              <div class="col-12">
                 <div class="agenda-list-head">
                   <div>
                     <div class="agenda-title">Horários do mês</div>
@@ -436,6 +445,8 @@
                 </div>
 
                 <div id="agendaList"></div>
+
+                <div id="agendaPaginator" class="mt-3 d-flex justify-content-center"></div>
 
                 <div class="mt-3 text-muted small">
                   Dica: clique em “Novo horário” para criar rápido.
@@ -465,75 +476,92 @@
             </div>
 
             <div class="row g-3">
-              <div class="col-md-4">
+              <div class="col-12 col-md-4">
                 <div class="kpi-mini">
                   <div class="lab">Saldo</div>
                   <div class="num">R$ <span id="proCbBalance">0,00</span></div>
                   <div class="sub">Disponível agora</div>
                 </div>
               </div>
-              <div class="col-md-4">
-                <div class="kpi-mini">
-                  <div class="lab">Meta</div>
-                  <div class="num">R$ <span id="proCbGoal">0,00</span></div>
-                  <div class="sub">Objetivo do período</div>
-                  <div class="bar"><i id="proCbBar"></i></div>
+
+              <div class="col-12 col-md-8">
+                <div class="agenda-list-head">
+                  <div>
+                    <div class="agenda-title">Extrato de cashback</div>
+                    <div class="text-muted small">Histórico de ganhos e resgates</div>
+                  </div>
                 </div>
-              </div>
-              <div class="col-md-4">
-                <div class="kpi-mini">
-                  <div class="lab">Progresso</div>
-                  <div class="num"><span id="proCbPct">0</span>%</div>
-                  <div class="sub">Atingimento</div>
+
+                <div class="table-responsive">
+                  <table class="table table-dark table-borderless align-middle mb-0">
+                    <thead>
+                      <tr>
+                        <th>Data</th>
+                        <th>Origem</th>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                      </tr>
+                    </thead>
+                    <tbody id="proCbTbody"></tbody>
+                  </table>
                 </div>
               </div>
             </div>
-
-            <hr class="hr-soft">
-
-            <div class="table-responsive">
-              <table class="table table-dark table-borderless align-middle mb-0">
-                <thead>
-                  <tr>
-                    <th>Data</th>
-                    <th>Origem</th>
-                    <th>Descrição</th>
-                    <th>Valor</th>
-                  </tr>
-                </thead>
-                <tbody id="proCbTbody"></tbody>
-              </table>
-            </div>
-          </div>
         </section>
 
         <!-- MINHAS COMPRAS -->
         <section class="view" id="view-compras">
           <div class="card p-4 js-stagger">
 
-            <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-3">
-              <span class="plan-pill" style="margin-top:0;">
-                <span>Total:</span>
-                <b id="ordersCount">0 pedidos</b>
-              </span>
-            </div>
-
-            <div class="orders-toolbar mb-3">
-              <div class="orders-filters">
-                <button class="orders-filter is-active" data-status="ALL">Todos</button>
-                <button class="orders-filter" data-status="AGUARDANDO">Aguardando</button>
-                <button class="orders-filter" data-status="ENTREGUE">Entregue</button>
-                <button class="orders-filter" data-status="CANCELADO">Cancelado</button>
-                <button class="orders-filter" data-status="DEVOLVIDO">Devolvido</button>
+            <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-2">
+              <div>
+                <h6 class="fw-bold section-title mb-0">Minhas compras</h6>
+                <p class="text-muted mb-0">Acompanhe pedidos, entregas e pós-venda.</p>
               </div>
 
-              <div class="orders-search-wrap">
-                <input type="text" id="ordersSearch" class="form-control bg-black text-white form-premium orders-search"
-                  placeholder="Buscar produto ou pedido...">
+              <div class="d-flex flex-wrap align-items-center gap-3">
+                <span class="plan-pill" style="margin-top:0;">
+                  <span>Total:</span>
+                  <b id="ordersCount">0 pedidos</b>
+                </span>
               </div>
             </div>
 
-            <div id="ordersList" class="orders-list"></div>
+            <div class="row g-3">
+              <div class="col-12 col-md-4">
+                <div class="kpi-mini">
+                  <div class="lab">Total de pedidos</div>
+                  <div class="num" id="ordersCountNum">0</div>
+                  <div class="sub">Realizados</div>
+                </div>
+
+                <div class="orders-toolbar mt-3">
+                  <div class="orders-filters">
+                    <button class="orders-filter is-active" data-status="ALL">Todos</button>
+                    <button class="orders-filter" data-status="AGUARDANDO">Aguardando</button>
+                    <button class="orders-filter" data-status="ENTREGUE">Entregue</button>
+                    <button class="orders-filter" data-status="CANCELADO">Cancelado</button>
+                    <button class="orders-filter" data-status="DEVOLVIDO">Devolvido</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-8">
+                <div class="agenda-list-head">
+                  <div>
+                    <div class="agenda-title">Pedidos realizados</div>
+                    <div class="text-muted small">Acompanhe o status e entrega dos seus pedidos</div>
+                  </div>
+                </div>
+
+                <div class="orders-search-wrap mb-3">
+                  <input type="text" id="ordersSearch" class="form-control bg-black text-white form-premium orders-search"
+                    placeholder="Buscar produto ou pedido...">
+                </div>
+
+                <div id="ordersList" class="orders-list"></div>
+              </div>
+            </div>
           </div>
         </section>
 
