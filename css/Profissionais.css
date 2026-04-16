@@ -16,7 +16,7 @@ body::before {
 
 
 /* TITULO */
-h2 {
+#start {
   font-size: 48px;
   /* Aumentado para mais imponência */
   font-weight: 900;
