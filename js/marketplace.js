@@ -399,13 +399,15 @@ function renderProducts(list){
             ${isFav?'★':'☆'}
           </span>
 
-          <img src="${escHtml(p.img)}" class="product-img mb-3" alt="${escHtml(p.name)}">
-          <h6 class="product-title">${escHtml(p.name)}</h6>
-          ${desc ? `<div class="mini product-desc mb-1">${escHtml(desc)}</div>` : ``}
-          ${ratingHtml}
-          ${hasDiscount ? `<div class="mini price-original">${formatBRLFromCents(p.originalPriceCents)}</div>` : ``}
-          <strong class="price-current ${hasDiscount ? "has-discount" : ""}">${formatBRLFromCents(p.priceCents)}</strong>
-          <div class="cashback-line">Ganhe cashback: ${formatBRLFromCents(cashbackEarnCents)}</div>
+          <div>
+            <img src="${escHtml(p.img)}" class="product-img mb-3" alt="${escHtml(p.name)}">
+            <h6 class="product-title">${escHtml(p.name)}</h6>
+            ${desc ? `<div class="mini product-desc mb-1">${escHtml(desc)}</div>` : ``}
+            ${ratingHtml}
+            ${hasDiscount ? `<div class="mini price-original">${formatBRLFromCents(p.originalPriceCents)}</div>` : ``}
+            <strong class="price-current ${hasDiscount ? "has-discount" : ""}">${formatBRLFromCents(p.priceCents)}</strong>
+            <div class="cashback-line">Ganhe cashback: ${formatBRLFromCents(cashbackEarnCents)}</div>
+          </div>
 
           <button class="btn btn-gold w-100 mt-3" onclick="addToCart('${String(p.id)}')">
             Adicionar
