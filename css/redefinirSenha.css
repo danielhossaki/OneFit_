@@ -48,7 +48,7 @@ body {
 .btn-home {
     text-decoration: none;
     font-weight: 600;
-    color: white;
+    color: #f7f2f2;
     background: rgba(0, 0, 0, .80);
     border: 1px solid rgba(245, 180, 0, .35);
     padding: 6px 14px;
@@ -83,7 +83,12 @@ body {
         0 25px 70px rgba(0, 0, 0, .8),
         0 0 40px rgba(245, 180, 0, .25);
 
+<<<<<<< HEAD
     color: white;
+=======
+    color: #f7f2f2;
+
+>>>>>>> 0fdb2ca9349b22aa0021c0ad32f88a6542ba7a9a
 }
 
 /* NECESSÁRIO PARA EFEITOS (camadas internas) */

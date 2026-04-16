@@ -18,7 +18,7 @@
 
 body{
   font-family:'Montserrat',sans-serif;
-  color:#fff;
+  color:#f7f2f2;
   min-height:100vh;
   margin:0;
   background:
@@ -397,7 +397,7 @@ color:#c18b00
 }
 
 /* .text-muted{
-  color:#fff !important;
+  color:#f7f2f2 !important;
 } */
 
 /* Melhorar contraste em telas pequenas */
@@ -419,7 +419,7 @@ color:#c18b00
   .badge-pill{
     background:rgba(255,255,255,.10);
     border-color:rgba(255,255,255,.25);
-    color:#fff;
+    color:#f7f2f2;
   }
 }
 
@@ -868,7 +868,7 @@ color:#c18b00
 .radial .pct{
   font-weight:1000;
   margin-top:6px;
-  color:#fff;
+  color:#f7f2f2;
   opacity:.92;
 }
 
@@ -1271,7 +1271,7 @@ color:#c18b00
 
 .offcanvas-premium{
   background:rgba(10,10,10,.92);
-  color:#fff;
+  color:#f7f2f2;
   border-right:1px solid rgba(255,255,255,.08);
   backdrop-filter:blur(14px);
   -webkit-backdrop-filter:blur(14px);
