@@ -1,23 +1,27 @@
+/* IMPORTA A FONTE POPPINS DO GOOGLE */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
+/* RESET GLOBAL (remove espaçamentos padrão e organiza layout) */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* evita problemas de tamanho */
     font-family: 'Poppins', sans-serif;
 }
 
+/* CORPO DA PÁGINA */
 body {
 
-    min-height: 100vh;
+    min-height: 100vh; /* ocupa a tela inteira */
 
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: center;     /* centraliza horizontal */
+    justify-content: center; /* centraliza vertical */
 
     padding: 20px;
 
+    /* FUNDO ESCURO + IMAGEM */
     background:
         linear-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .85)),
         url('../img/fundo01.png') center/cover no-repeat;
@@ -25,21 +29,22 @@ body {
 }
 
 
-/* botao voltar para a home */
+/* CONTAINER DO BOTÃO "VOLTAR" */
 .top-wrap {
     width: 100%;
     max-width: 360px;
     margin: 0 auto;
     display: flex;
-    justify-content: flex-start;
-    /* 👈 joga pra esquerda */
+    justify-content: flex-start; /* alinha à esquerda */
 }
 
+/* ESPAÇAMENTO DO BOTÃO */
 .btn-home-wrap {
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
+/* ESTILO DO BOTÃO HOME */
 .btn-home {
     text-decoration: none;
     font-weight: 600;
@@ -52,12 +57,14 @@ body {
     display: inline-block;
 }
 
+/* HOVER DO BOTÃO HOME */
 .btn-home:hover {
     background: rgb(245, 180, 0);
     color: black;
     border-color: rgb(245, 180, 0);
 }
 
+/* CARD PRINCIPAL */
 .login-card {
 
     width: 100%;
@@ -71,21 +78,27 @@ body {
 
     border: 1px solid rgba(245, 180, 0, .35);
 
+    /* SOMBRA PROFUNDA + GLOW */
     box-shadow:
         0 25px 70px rgba(0, 0, 0, .8),
         0 0 40px rgba(245, 180, 0, .25);
 
+<<<<<<< HEAD
+    color: white;
+=======
     color: #f7f2f2;
 
+>>>>>>> 0fdb2ca9349b22aa0021c0ad32f88a6542ba7a9a
 }
-/* aqui entra o efeito por traz do card*/
+
+/* NECESSÁRIO PARA EFEITOS (camadas internas) */
 .login-card {
     position: relative;
     overflow: hidden;
     z-index: 1;
 }
 
-/* 🔥 EFEITO GIRANDO */
+/* 🔥 EFEITO DE LUZ GIRANDO ATRÁS DO CARD */
 .login-card::before {
     content: "";
     position: absolute;
@@ -96,6 +109,7 @@ body {
     top: -50%;
     left: -50%;
 
+    /* GRADIENTE CIRCULAR */
     background: conic-gradient(
         transparent 60%,
         #f58300,
@@ -104,15 +118,13 @@ body {
         transparent 100%
     );
 
-    animation: girar 11s linear infinite;
+    animation: girar 11s linear infinite; /* animação contínua */
 
-    filter: blur(8px);
+    filter: blur(8px); /* suaviza a luz */
     z-index: -1;
-    
-
 }
 
-/* 🔥 FUNDO INTERNO */
+/* FUNDO INTERNO DO CARD */
 .login-card::after {
     content: "";
     position: absolute;
@@ -124,23 +136,27 @@ body {
     z-index: -1;
 }
 
+/* LOGO */
 .logo {
     max-width: 220px;
     margin: 0 auto 18px;
     display: block;
 }
 
+/* TÍTULO */
 h1 {
     text-align: center;
     margin-bottom: 16px;
     font-size: 24px;
 }
 
+/* GRUPO DOS INPUTS */
 .input-group {
     position: relative;
     margin-bottom: 15px;
 }
 
+/* INPUT */
 .input-group input {
 
     width: 100%;
@@ -156,111 +172,100 @@ h1 {
     font-size: 14px;
 
     outline: none;
-
 }
 
+/* ÍCONE DENTRO DO INPUT */
 .input-group i {
-
     position: absolute;
-
     right: 15px;
     top: 50%;
-
     transform: translateY(-50%);
-
     color: #555;
-
 }
 
+/* BOTÃO DE MOSTRAR SENHA */
 .toggle-password {
-
     position: absolute;
-
     right: 42px;
     top: 50%;
-
     transform: translateY(-50%);
-
     cursor: pointer;
-
 }
 
+/* TEXTO DE ERRO */
 .erro {
-
     color: #ff4d4d;
-
     font-size: 13px;
-
     margin-bottom: 10px;
-
     min-height: 18px;
-
 }
 
+/* TEXTO DE SUCESSO */
 .success {
-
     color: #6cff7b;
-
     font-size: 13px;
-
     margin-bottom: 10px;
-
     min-height: 18px;
-
 }
 
+/* LINKS (lembrar senha / voltar) */
 .remember-forgot {
-
     display: flex;
     justify-content: space-between;
-
     font-size: 13px;
-
     margin-bottom: 18px;
-
 }
 
 .remember-forgot a {
-
     color: #f5b400;
-
     text-decoration: none;
-
 }
 
+/* 🔥 BOTÃO LOGIN PREMIUM */
 .btn-login {
+  position: relative;
+  width: 100%;
+  height: 44px;
 
-    width: 100%;
-    height: 48px;
+  border-radius: 16px;
 
-    background: #f5b400;
+  /* BORDA SUAVE */
+  border: 1px solid rgba(255, 200, 0, 0.15);
 
-    border: none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #111;
 
-    border-radius: 10px;
+  cursor: pointer;
+  opacity: .5;
 
-    font-weight: 600;
+  /* GRADIENTE DOURADO */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 220, 120, 0.9),
+    rgba(245, 180, 0, 0.85)
+  );
 
-    cursor: pointer;
+  backdrop-filter: blur(6px); /* efeito vidro */
 
-    opacity: .5;
+  /* SOMBRA 3D */
+  box-shadow:
+    inset 0 1px 2px rgba(255,255,255,.6), /* brilho interno */
+    inset 0 -2px 4px rgba(0,0,0,.2),     /* profundidade */
+    0 1px 0 #7a5a00,                   /* base do botão */
+    0 8px 15px rgba(0,0,0,.4);         /* sombra externa */
 
-    transition: .3s;
-
+  transition: all .2s cubic-bezier(.22,1,.36,1);
+  transform: translateY(0);
+  overflow: hidden;
 }
 
+/* BOTÃO ATIVO */
 .btn-login.ativo {
-
     opacity: 1;
-
 }
 
-.btn-login:hover {
-
-    background: #ffc107;
-
-}
-
+/* CONTROLE DE TELAS */
 .screen {
     display: none;
 }
@@ -268,7 +273,48 @@ h1 {
 .screen.active {
     display: block;
 }
-/*aqui tem que adicionar no final do css apos colocar o efeito do card*/
+
+/* 🔥 BOTÃO DESATIVADO */
+.btn-login:disabled {
+  opacity: .4;
+  cursor: not-allowed;
+
+  transform: none;
+
+  box-shadow:
+    inset 0 1px 2px rgba(255,255,255,.3),
+    inset 0 -2px 4px rgba(0,0,0,.2),
+    0 1px 0 #7a5a00;
+}
+
+/* BOTÃO ATIVO AUTOMÁTICO */
+.btn-login:not(:disabled) {
+  opacity: 1;
+}
+
+/* HOVER (quando passa o mouse) */
+.btn-login:not(:disabled):hover {
+  transform: translateY(-1px) scale(1.01);
+
+  box-shadow:
+    inset 0 2px 4px rgba(255,255,255,.7),
+    inset 0 -3px 6px rgba(0,0,0,.25),
+    0 3px 0 #7a5a00,
+    0 12px 20px rgba(0,0,0,.5);
+}
+
+/* CLIQUE (efeito pressionado) */
+.btn-login:not(:disabled):active {
+  transform: translateY(3px) scale(0.98);
+
+  box-shadow:
+    inset 0 4px 8px rgba(0,0,0,.5),
+    inset 0 -2px 3px rgba(255,255,255,.3),
+    0 1px 0 #7a5a00,
+    0 4px 10px rgba(0,0,0,.5);
+}
+
+/* ANIMAÇÃO DO FUNDO GIRANDO */
 @keyframes girar {
     0% {
         transform: rotate(0deg);

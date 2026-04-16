@@ -632,6 +632,20 @@
   
   .order-meta{
     min-width:0;
+    flex:1;
+  }
+
+  .order-meta .mini{
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+  
+  .order-top{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:14px;
+    flex-wrap:wrap;
   }
   
   .order-title{
@@ -639,6 +653,8 @@
     color:rgba(255,255,255,.96);
     font-size:1rem;
     line-height:1.15;
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
   
   .order-sub{
@@ -646,6 +662,8 @@
     color:rgba(var(--gold-glow),.84);
     font-size:.84rem;
     font-weight:700;
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
   
   .order-price{
@@ -788,6 +806,8 @@
     gap:10px 18px;
     color:rgba(255,255,255,.88);
     font-size:.84rem;
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
   
   .order-info-line strong{
@@ -828,6 +848,28 @@
     }
   }
   
+  @media (min-width:768px) and (max-width:991.98px){
+    .order-progress{
+      grid-template-columns:repeat(2, 1fr);
+      gap:8px;
+    }
+    .order-step{
+      padding:10px 8px;
+      font-size:.7rem;
+    }
+    .order-card{
+      padding:14px;
+    }
+    .order-thumb{
+      width:64px;
+      height:64px;
+    }
+    .order-meta{
+      flex:1;
+      min-width:0;
+    }
+  }
+
   @media (max-width:575.98px){
     .order-product{
       align-items:flex-start;
@@ -845,6 +887,27 @@
     .orders-search-wrap{
       max-width:none;
       min-width:100%;
+    }
+
+    .order-card{
+      padding:12px;
+    }
+
+    .order-step{
+      padding:8px 6px;
+      font-size:.68rem;
+    }
+
+    .order-bottom{
+      flex-direction:column;
+      align-items:flex-start;
+      gap:8px;
+    }
+
+    .order-info-line{
+      flex-direction:column;
+      align-items:flex-start;
+      gap:4px;
     }
   }
 

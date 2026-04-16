@@ -1,28 +1,33 @@
+/* IMPORTA A FONTE POPPINS */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
+/* RESET GLOBAL */
 *{
 margin:0;
 padding:0;
-box-sizing:border-box;
+box-sizing:border-box; /* controla tamanho dos elementos */
 font-family:'Poppins',sans-serif;
 }
 
+/* CORPO DA PÁGINA */
 body{
 
-min-height:100vh;
+min-height:100vh; /* ocupa a tela inteira */
 
 display:flex;
-align-items:center;
-justify-content:center;
+align-items:center;     /* centraliza vertical */
+justify-content:center; /* centraliza horizontal */
 
 padding:20px;
 
+/* FUNDO ESCURO + IMAGEM */
 background:
 linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.85)),
 url('../img/fundo01.png') center/cover no-repeat;
 
 }
 
+/* CARD DE LOGIN */
 .login-card{
 
 width:100%;
@@ -30,12 +35,14 @@ max-width:360px;
 
 padding:10px 30px 35px;
 
-background:rgba(0,0,0,.80);
+background:rgba(0,0,0,.80); /* fundo escuro */
 
 border-radius:18px;
 
+/* BORDA DOURADA */
 border:1px solid rgba(245,180,0,.35);
 
+/* SOMBRA + GLOW */
 box-shadow:
 0 25px 70px rgba(0,0,0,.8),
 0 0 40px rgba(245,180,0,.25);
@@ -43,13 +50,15 @@ box-shadow:
 color: #f7f2f2;
 
 }
+
+/* NECESSÁRIO PARA EFEITOS (camadas) */
 .login-card {
   position: relative;
-  overflow: hidden; /* importante */
+  overflow: hidden; /* corta o excesso */
   z-index: 1;
 }
 
-/* 🔥 EFEITO GIRANDO */
+/* 🔥 EFEITO DE LUZ GIRANDO ATRÁS */
 .login-card::before {
   content: "";
   position: absolute;
@@ -60,23 +69,22 @@ color: #f7f2f2;
   top: -50%;
   left: -50%;
 
+  /* GRADIENTE CIRCULAR */
   background: conic-gradient(
   transparent 60%,
   #f58300,
   #ffd54f,
   #f5b400,
   transparent 100%
-  
-
   );
 
-  animation: girar 11s linear infinite; /*efeito lanterna */
+  animation: girar 11s linear infinite; /* animação contínua */
 
-  filter: blur(6px);
+  filter: blur(6px); /* suaviza a luz */
   z-index: -1;
 }
 
-/* 🔥 FUNDO INTERNO PRA NÃO COBRIR O CARD */
+/* FUNDO INTERNO DO CARD */
 .login-card::after {
   content: "";
   position: absolute;
@@ -88,11 +96,10 @@ color: #f7f2f2;
   z-index: -1;
 }
 
-/* botao voltar para a home */
-
+/* BOTÃO HOME (topo) */
 .btn-home-wrap {
   display: flex;
-  justify-content: flex-end; /* joga o conteúdo para a direita */
+  justify-content: flex-end; /* joga pra direita */
   width: 100%;
   padding: 0.5rem 0;
 }
@@ -107,29 +114,33 @@ color: #f7f2f2;
   display: inline-block;
 }
 
+/* HOVER DO BOTÃO HOME */
 .btn-home:hover {
   background: rgb(245, 180, 0);
   color: rgb(22, 22, 22);
-  border-color: rgb(245, 180, 0);
 }
 
+/* LOGO */
 .logo{
 max-width:220px;
 margin:0 auto 18px;
 display:block;
 }
 
+/* TÍTULO */
 h1{
 text-align:center;
 margin-bottom:16px;
 font-size:24px;
 }
 
+/* GRUPO DE INPUT */
 .input-group{
 position:relative;
 margin-bottom:15px;
 }
 
+/* INPUT */
 .input-group input{
 
 width:100%;
@@ -148,100 +159,176 @@ outline:none;
 
 }
 
+/* ÍCONE DO INPUT */
 .input-group i{
-
 position:absolute;
-
 right:15px;
 top:50%;
-
 transform:translateY(-50%);
-
 color:#555;
-
 }
 
+/* BOTÃO MOSTRAR SENHA */
 .toggle-password{
-
 position:absolute;
-
 right:42px;
 top:50%;
-
 transform:translateY(-50%);
-
 cursor:pointer;
-
 }
 
+/* TEXTO DE ERRO */
 .erro{
-
 color:#ff4d4d;
-
 font-size:13px;
-
 margin-bottom:10px;
-
 }
 
+/* LINKS (lembrar senha) */
 .remember-forgot{
-
 display:flex;
 justify-content:space-between;
-
 font-size:13px;
-
 margin-bottom:18px;
-
 }
 
 .remember-forgot a{
-
 color:#f5b400;
-
 text-decoration:none;
-
 }
 
-.btn-login{
+/* ===== BOTÃO COM EFEITO ===== */
+.btn-login {
+  position: relative;
+  width: 100%;
+  height: 44px; /* altura do botão */
 
-width:100%;
-height:48px;
+  border-radius: 16px;
 
-background:#f5b400;
+  /* BORDA SUAVE */
+  border: 1px solid rgba(255, 200, 0, 0.15);
 
-border:none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #111;
 
-border-radius:10px;
+  cursor: pointer;
+  opacity: .5;
 
-font-weight:600;
+  /* GRADIENTE DOURADO */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 220, 120, 0.9),
+    rgba(245, 180, 0, 0.85)
+  );
 
-cursor:pointer;
+  backdrop-filter: blur(6px); /* efeito vidro */
 
-opacity:.5;
+  /* SOMBRA 3D */
+  box-shadow:
+  inset 0 1px 2px rgba(255,255,255,.6), /* brilho interno */
+  inset 0 -2px 4px rgba(0,0,0,.2),     /* profundidade */
+  0 1px 0 #7a5a00,                   /* base do botão */
+  0 10px 18px rgba(0,0,0,.45);       /* sombra externa */
 
-transition:.3s;
+  transition: all .2s cubic-bezier(.22,1,.36,1);
+  transform: translateY(0);
 
+  overflow: hidden;
 }
 
-.btn-login.ativo{
-
-opacity:1;
-
+/* BOTÃO ATIVO */
+.btn-login.ativo {
+  opacity: 1;
 }
 
-.btn-login:hover{
+/* BORDA COM GLOW */
+.btn-login::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 18px;
 
-background:#ffc107;
+  background: linear-gradient(
+    120deg,
+    #ffd54f,
+    #fff176,
+    #f5b400,
+    #ffd54f
+  );
 
+  z-index: -1;
+  filter: blur(5px);
+  opacity: 0;
+
+  transition: .3s;
 }
 
+/* BRILHO PASSANDO */
+.btn-login::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    120deg,
+    transparent 20%,
+    rgba(255,255,255,.6),
+    transparent 80%
+  );
+
+  transform: translateX(-120%) skewX(-25deg);
+}
+
+/* HOVER (levanta botão) */
+.btn-login:hover {
+   transform: translateY(-1px) scale(1.01);
+
+  box-shadow:
+    inset 0 2px 4px rgba(255,255,255,.8),
+    inset 0 -4px 8px rgba(0,0,0,.3),
+    0 4px 0 #7a5a00,
+    0 20px 35px rgba(0,0,0,.7);
+}
+
+/* ATIVA GLOW */
+.btn-login:hover::before {
+  opacity: .6;
+}
+
+/* ANIMA BRILHO */
+.btn-login:hover::after {
+  animation: energia 1s linear;
+}
+
+/* CLIQUE (afunda botão) */
+.btn-login:active {
+   transform: translateY(3px) scale(0.98);
+
+  box-shadow:
+    inset 0 4px 8px rgba(0,0,0,.5),
+    inset 0 -2px 3px rgba(255,255,255,.3),
+    0 1px 0 #7a5a00,
+    0 4px 10px rgba(0,0,0,.5);
+}
+
+/* ANIMAÇÃO DO BRILHO */
+@keyframes energia {
+  0% {
+    transform: translateX(-120%) skewX(-25deg);
+  }
+  100% {
+    transform: translateX(140%) skewX(-25deg);
+  }
+}
+
+/* TEXTO FINAL */
 .register-link{
-
 margin-top:15px;
 text-align:center;
+}
 
-} /*efeito card*/
+/* ANIMAÇÃO DO CARD */
 @keyframes girar {
   0% {
     transform: rotate(0deg);
