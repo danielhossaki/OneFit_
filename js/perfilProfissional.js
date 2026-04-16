@@ -1375,7 +1375,6 @@ function bindEventTimeMask(){
    function renderOrders(){
      const list = document.getElementById('ordersList');
      const total = document.getElementById('ordersCount');
-     const totalNum = document.getElementById('ordersCountNum');
      if (!list || !total) return;
 
     const all = loadSharedOrders();
@@ -1389,7 +1388,6 @@ function bindEventTimeMask(){
      });
    
      total.textContent = `${arr.length} ${arr.length === 1 ? 'pedido' : 'pedidos'}`;
-     if (totalNum) totalNum.textContent = arr.length;
    
      if (!arr.length){
        list.innerHTML = `
