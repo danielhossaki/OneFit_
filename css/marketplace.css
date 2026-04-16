@@ -11,7 +11,7 @@
     background:linear-gradient(rgba(0,0,0,.85),rgba(0,0,0,.85)),url('../img/fundo01.png');
     background-size:cover;
     background-attachment:fixed;
-    color:#fff;
+    color:#f7f2f2;
   }
 
   /* Mobile performance: evita "fixed background" em celulares */
@@ -121,7 +121,7 @@
   
   .category-btn{
     border:1px solid rgba(255,255,255,.2);
-    color:#fff;
+    color:#f7f2f2;
     background:none;
     border-radius:30px;
     padding:6px 15px;
@@ -133,7 +133,7 @@
   .category-btn.active,
   .category-btn:hover{
     background:var(--gold);
-    color:#000;
+    color:#000000;
     font-weight:700;
   }
   
@@ -203,13 +203,13 @@
   
   .input-group-text{
     background:rgba(255,255,255,.08);
-    color:#fff;
+    color:#f7f2f2;
     border-color: rgba(255,255,255,.14);
   }
   
   .form-control, .form-select{
-    background:rgba(0,0,0,.25);
-    color:#fff;
+    background:rgba(12, 12, 12, 0.25);
+    color:#f7f2f2;
     border-color: rgba(255,255,255,.14);
   }
   
@@ -217,13 +217,13 @@
   
   .form-control:focus, .form-select:focus{
     background:rgba(0,0,0,.25);
-    color:#fff;
+    color:#f7f2f2;
     border-color: var(--gold);
     box-shadow: 0 0 0 .2rem rgba(245,180,0,.15);
   }
   
   .pay-hint{
-    background:rgba(0,0,0,.25);
+    background:rgba(10, 10, 10, 0.25);
     border:1px solid rgba(255,255,255,.12);
     word-break:break-all;
   }

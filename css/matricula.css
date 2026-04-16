@@ -10,7 +10,7 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  color: #fff;
+  color: #f7f2f2;
   min-height: 100vh;
   margin: 0;
   background:
@@ -60,7 +60,7 @@ body {
 .btn-home {
   text-decoration: none;
   font-weight: 600;
-  color: white;
+  color: #f7f2f2;
   background: #111;
   border: 1px solid rgba(255, 255, 255, .15);
   padding: 6px 14px;
@@ -206,7 +206,7 @@ body {
   background: transparent !important;
   border: none !important;
   border-bottom: 1px solid rgba(255, 255, 255, .22) !important;
-  color: #fff !important;
+  color: #f7f2f2 !important;
   border-radius: 0 !important;
   padding-left: 0 !important;
   padding-right: 0 !important;
@@ -389,7 +389,7 @@ hr {
   width: 170px;
   height: 170px;
   border-radius: 14px;
-  background: #fff;
+  background: #f7f2f2;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -402,13 +402,13 @@ hr {
   border: 1px solid rgba(255, 255, 255, .12);
   border-radius: 12px !important;
   padding: 12px 12px !important;
-  color: #fff !important;
+  color: #f7f2f2 !important;
 }
 
 .summary {
   font-size: 1.2rem;
   font-weight: 800;
-  color: #fff;
+  color: #f7f2f2;
 }
 
 .summary-footer {

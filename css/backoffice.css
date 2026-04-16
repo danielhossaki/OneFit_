@@ -33,7 +33,7 @@ body {
 
 body {
   font-family: 'Montserrat', sans-serif;
-  color: #fff;
+  color: #f7f2f2;
   min-height: 100vh;
   margin: 0;
   background: linear-gradient(rgba(0, 0, 0, .72), rgba(0, 0, 0, .72)), url('../img/fundo01.png');
@@ -909,6 +909,74 @@ body {
   }
 }
 
+@media (max-width: 991.98px) {
+  .products-table {
+    min-width: 0;
+  }
+
+  #view-products .products-table thead {
+    display: none;
+  }
+
+  #view-products .products-table,
+  #view-products .products-table tbody,
+  #view-products .products-table tr,
+  #view-products .products-table td {
+    display: block;
+    width: 100%;
+  }
+
+  #view-products .products-table tbody tr {
+    margin-bottom: 10px;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, .02);
+  }
+
+  #view-products .products-table tbody td {
+    border: 0;
+    padding: 7px 0;
+    white-space: normal;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  #view-products .products-table tbody td::before {
+    content: attr(data-label);
+    color: rgba(var(--gold-glow), .88);
+    font-weight: 800;
+    font-size: .8rem;
+    flex: 0 0 84px;
+  }
+
+  #view-products .products-table tbody td[data-label="Produto"] {
+    display: block;
+  }
+
+  #view-products .products-table tbody td[data-label="Produto"]::before {
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  #view-products .products-table tbody td[data-label="Ações"] {
+    display: block;
+    text-align: left !important;
+    white-space: normal;
+  }
+
+  #view-products .products-table tbody td[data-label="Ações"]::before {
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  #view-products .products-table .products-empty-row td::before {
+    content: none;
+  }
+}
+
 .pill-mini {
   display: inline-flex;
   align-items: center;
@@ -970,7 +1038,7 @@ body {
 /* ========================= OFFCANVAS ========================= */
 .offcanvas-premium {
   background: rgba(10, 10, 10, .92);
-  color: #fff;
+  color: #f7f2f2;
   border-right: 1px solid rgba(255, 255, 255, .08);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
@@ -994,6 +1062,19 @@ body {
 @media (max-width: 1199.98px) {
   .kpi-strip {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 991.98px) {
+  .kpi-strip.kpi-strip-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767.98px) {
+  .kpi-strip,
+  .kpi-strip.kpi-strip-3 {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1413,7 +1494,7 @@ body {
 .form-select {
   height: var(--ctrl-h);
   background: rgba(0, 0, 0, .65) !important;
-  color: #fff !important;
+  color: #f7f2f2 !important;
   border-color: rgba(255, 255, 255, .12) !important;
   border-radius: var(--ctrl-r) !important;
   font-size: .86rem;
