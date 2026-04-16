@@ -232,6 +232,10 @@ body {
   border-bottom: 1px solid rgba(var(--gold-glow), .95) !important;
 }
 
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
 .field-error {
   display: none;
   margin-top: 6px;
@@ -251,10 +255,15 @@ body {
   position: relative;
 }
 
+.password-input {
+  width: calc(100% - 40px);
+}
+
 .toggle-pass {
   position: absolute;
   right: 0;
-  top: 34px;
+  top: 50%;
+  transform: translateY(-50%);
   border: none;
   background: transparent;
   color: rgba(255, 255, 255, .78);
