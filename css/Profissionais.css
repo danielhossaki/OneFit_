@@ -24,11 +24,10 @@ h2 {
   letter-spacing: -1px;
 
   /* Gradiente Premium: Branco com um toque de Ouro */
-<<<<<<< HEAD
+
   background: linear-gradient(135deg, rgba(245, 180, 0, 0.6) 30%, #94700d5e 100%);
-=======
-  background: linear-gradient(135deg, #f7f2f2 30%, #94700d5e 100%);
->>>>>>> 52c2b4bf402bd4dfb3d163289692c08e1cce9b8c
+
+ 
 
   -webkit-background-clip: text;
   background-clip: text;
