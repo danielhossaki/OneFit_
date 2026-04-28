@@ -328,6 +328,10 @@ margin-top:15px;
 text-align:center;
 }
 
+.register-link a{
+  color: #f5b400;
+}
+
 /* ANIMAÇÃO DO CARD */
 @keyframes girar {
   0% {

@@ -163,12 +163,12 @@ body {
 }
 
 .text-muted {
-  color: rgba(255, 255, 255, .72) !important;
+  color: rgb(255, 255, 255) !important;
   opacity: .92;
 }
 
 .text-gold {
-  color: rgb(245, 180, 0) !important;
+  color: rgb(255 255 255 / 58%) !important;
   opacity: 1 !important;
   font-weight: 600;
 }
@@ -206,7 +206,7 @@ body {
   background: transparent !important;
   border: none !important;
   border-bottom: 1px solid rgba(255, 255, 255, .22) !important;
-  color: #f7f2f2 !important;
+  color: #cdcdcd !important;
   border-radius: 0 !important;
   padding-left: 0 !important;
   padding-right: 0 !important;
@@ -411,7 +411,7 @@ hr {
   border: 1px solid rgba(255, 255, 255, .12);
   border-radius: 12px !important;
   padding: 12px 12px !important;
-  color: #f7f2f2 !important;
+  color: #f7f2f28a !important;
 }
 
 .summary {
