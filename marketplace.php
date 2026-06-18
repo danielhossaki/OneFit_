@@ -1,4 +1,4 @@
-<!-- index.html -->
+<!-- index.php -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -10,8 +10,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="./css/marketplace.css" />
-  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="./assets/css/marketplace.css" />
+  <link rel="stylesheet" href="./assets/css/footer.css">
 </head>
 
 <body>
@@ -19,7 +19,7 @@
 
     <div class="d-flex justify-content-between align-items-center mb-4">
       <div>
-        <img src="./img/logo_oneFit.webp" class="logo" alt="ONE FIT" />
+        <img src="./assets/img/logo_oneFit.webp" class="logo" alt="ONE FIT" />
         <h5 class="fw-bold mt-2">Marketplace ONE FIT</h5>
         <small>Seu Cashback:
           <span id="userCashback" style="color:var(--gold)">R$ 0,00</span>
@@ -250,145 +250,10 @@
 
 
   <!-- FOOTER -->
-  <!-- <footer>
-
-    <div id="rodape-1">
-
-      <div class="holder-1-rodape d-flex flex-column">
-        <a href="./index.html#sobre">Sobre nós
-
-          <img
-            src="https://cdn.prod.website-files.com/67ec66139f8f56d61a1cd4c9/68a4b3ec867a722470f71653_seta-rodape.svg"
-            loading="lazy" alt="" class="seta-link-footer">
-        </a>
-
-        <a href="./matricula.html">Matricule-se
-
-          <img
-            src="https://cdn.prod.website-files.com/67ec66139f8f56d61a1cd4c9/68a4b3ec867a722470f71653_seta-rodape.svg"
-            loading="lazy" alt="" class="seta-link-footer">
-        </a>
-
-        <a href="./index.html#planos">Conheça nossos planos
-
-          <img
-            src="https://cdn.prod.website-files.com/67ec66139f8f56d61a1cd4c9/68a4b3ec867a722470f71653_seta-rodape.svg"
-            loading="lazy" alt="" class="seta-link-footer">
-        </a>
-
-      </div>
-
-      <div class="holder-2-rodape d-flex flex-column">
-        <a href="./index.html#localizacao">Encontre nossa unidade
-
-          <img
-            src="https://cdn.prod.website-files.com/67ec66139f8f56d61a1cd4c9/68a4b3ec867a722470f71653_seta-rodape.svg"
-            loading="lazy" alt="" class="seta-link-footer">
-        </a>
-
-        <a href="./index.html#espaco">Conheça nosso espaço
-
-          <img
-            src="https://cdn.prod.website-files.com/67ec66139f8f56d61a1cd4c9/68a4b3ec867a722470f71653_seta-rodape.svg"
-            loading="lazy" alt="" class="seta-link-footer">
-        </a>
-
-        <a href="./telaProfissionais.html">Nossos profissionais
-
-          <img
-            src="https://cdn.prod.website-files.com/67ec66139f8f56d61a1cd4c9/68a4b3ec867a722470f71653_seta-rodape.svg"
-            loading="lazy" alt="" class="seta-link-footer">
-        </a>
-
-      </div>
-
-      <div class="holder-3-rodape d-flex flex-column">
-        <a href=" ">Termos de uso
-
-          <img
-            src="https://cdn.prod.website-files.com/67ec66139f8f56d61a1cd4c9/68a4b3ec867a722470f71653_seta-rodape.svg"
-            loading="lazy" alt="" class="seta-link-footer">
-        </a>
-
-        <a href=" ">Políticas de privacidade
-
-          <img
-            src="https://cdn.prod.website-files.com/67ec66139f8f56d61a1cd4c9/68a4b3ec867a722470f71653_seta-rodape.svg"
-            loading="lazy" alt="" class="seta-link-footer">
-        </a>
-
-        <a
-          href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJNwgMZMDDsgJRjKhkFNhVJGCJnGLvRNnRfRpmRwHTnKsBPPztsmHmJpczQPmSPHmqFNTNV">Ajuda
-          e suporte
-
-          <img
-            src="https://cdn.prod.website-files.com/67ec66139f8f56d61a1cd4c9/68a4b3ec867a722470f71653_seta-rodape.svg"
-            loading="lazy" alt="" class="seta-link-footer">
-        </a>
-
-      </div>
-
-      <div class="holder-4-rodape d-flex flex-column">
-        <h2>
-          Entre em contato
-        </h2>
-
-        <a id="botao-fale-conosco"
-          href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJNwgMZMDDsgJRjKhkFNhVJGCJnGLvRNnRfRpmRwHTnKsBPPztsmHmJpczQPmSPHmqFNTNV"
-          target="_blank">
-          Converse com a One...
-
-          <img id="seta-link-botao"
-            src="https://cdn.prod.website-files.com/67ec66139f8f56d61a1cd4c9/68a4b3ec867a722470f71653_seta-rodape.svg"
-            loading="lazy" alt="">
-        </a>
-      </div>
-
-    </div>
-
-    <div id="rodape-2">
-
-      <div id="titulo-rodape-2">
-        <h2>Visite nossas redes sociais</h2>
-      </div>
-
-      <div class="redes-sociais">
-        <a href="https://www.facebook.com/PanobiancoAcademia" target="_blank" class="link-rede-social w-inline-block">
-          <img src="https://cdn.prod.website-files.com/67ec66139f8f56d61a1cd4c9/68a4b150a5b3f9991bb29f3c_facebook.svg"
-            loading="lazy" alt="" class="logo-rede-social">
-        </a>
-
-        <a href="https://www.instagram.com" target="_blank" class="link-rede-social w-inline-block"><img
-            src="https://cdn.prod.website-files.com/67ec66139f8f56d61a1cd4c9/68a4b15088c80ce64ec8857f_instagram.svg"
-            loading="lazy" alt="" class="logo-rede-social">
-        </a>
-
-        <a href="https://www.linkedin.com" target="_blank" class="link-rede-social w-inline-block"><img
-            src="https://cdn.prod.website-files.com/67ec66139f8f56d61a1cd4c9/68a4b150a55a7b89f0cd9dd8_linkedin.svg"
-            loading="lazy" alt="" class="logo-rede-social">
-        </a>
-
-        <a href="https://www.youtube.com" target="_blank" class="link-rede-social w-inline-block"><img
-            src="https://cdn.prod.website-files.com/67ec66139f8f56d61a1cd4c9/68a4b150270f174faa8c122e_youtube.svg"
-            loading="lazy" alt="" class="logo-rede-social">
-        </a>
-
-        <a href="https://www.tiktok.com" target="_blank" class="link-rede-social w-inline-block"><img
-            src="https://cdn.prod.website-files.com/67ec66139f8f56d61a1cd4c9/68a4b15055cebdf9dbd254c4_tiktok.svg"
-            loading="lazy" alt="" class="logo-rede-social">
-        </a>
-      </div>
-
-      <div class="footer-bottom_separador hide-mb"></div>
-
-      <div class="text-size-tiny">© 2026 &nbsp; Desenvolvido por Ignite Software</div>
-
-    </div>
-
-  </footer> -->
+  <?php include './components/footer.php'; ?>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="./js/marketplace.js"></script>
+  <script src="./assets/js/marketplace.js"></script>
 </body>
 
 </html>

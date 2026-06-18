@@ -8,7 +8,7 @@
 
     <title>ONE FIT • Redefinir senha</title>
 
-    <link rel="stylesheet" href="./css/redefinirSenha.css">
+    <link rel="stylesheet" href="./assets/css/redefinirSenha.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -19,7 +19,7 @@
 
     <section class="login-card" data-aos="fade-up">
 
-        <img src="./img/logo_oneFit.webp" class="logo">
+        <img src="./assets/img/logo_oneFit.webp" class="logo">
 
         <!-- TELA EMAIL -->
 
@@ -43,7 +43,7 @@
 
             <div class="remember-forgot">
 
-                <a href="login.html">Voltar</a>
+                <a href="login.php">Voltar</a>
 
                 <a href="#" id="irNovaSenha" style="display:none">Definir nova senha</a>
 
@@ -95,7 +95,7 @@
 
     
 
-    <script src="./js/redefinirSenha.js"></script>
+    <script src="./assets/js/redefinirSenha.js"></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init({

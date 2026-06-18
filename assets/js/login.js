@@ -124,7 +124,7 @@ form.addEventListener("submit", function (e) {
         loginEm: new Date().toISOString(),
       })
     );
-    window.location.href = "./backoffice.html";
+    window.location.href = "./backoffice.php";
     return;
   }
 
@@ -149,7 +149,7 @@ form.addEventListener("submit", function (e) {
       })
     );
 
-    window.location.href = "./perfilProfissional.html";
+    window.location.href = "./perfilProfissional.php";
     return;
   }
 
@@ -173,7 +173,7 @@ form.addEventListener("submit", function (e) {
         loginEm: new Date().toISOString(),
       })
     );
-    window.location.href = "./perfilUsuario.html";
+    window.location.href = "./perfilUsuario.php";
     return;
   }
 
@@ -218,5 +218,5 @@ form.addEventListener("submit", function (e) {
     })
   );
 
-  window.location.href = "./perfilUsuario.html";
+  window.location.href = "./perfilUsuario.php";
 });

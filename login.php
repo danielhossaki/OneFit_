@@ -8,7 +8,7 @@
 
     <title>Login - OneFit</title>
 
-    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./assets/css/login.css">
 
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -23,13 +23,13 @@
         <div class="login-card" data-aos="zoom-in">
 
             <div class="btn-home-wrap m-0">
-                <a href="index.html" class="btn-home d-inline-flex align-items-center gap-2 w-auto">
+                <a href="index.php" class="btn-home d-inline-flex align-items-center gap-2 w-auto">
                     <i class="fa-solid fa-house"></i>
                     <span></span>
                 </a>
             </div>
 
-            <img src="./img/logo_oneFit.webp" class="logo" alt="Logo OneFit">
+            <img src="./assets/img/logo_oneFit.webp" class="logo" alt="Logo OneFit">
 
             <h1>Login</h1>
 
@@ -64,7 +64,7 @@
                         Lembrar senha
                     </label>
 
-                    <a href="redefinirSenha.html">Esqueci a senha</a>
+                    <a href="redefinirSenha.php">Esqueci a senha</a>
 
                 </div>
 
@@ -75,7 +75,7 @@
                 <div class="register-link">
 
                     Treine com a gente!
-                    <a href="matricula.html" class="btnMatricula">Matricule-se</a>
+                    <a href="matricula.php" class="btnMatricula">Matricule-se</a>
 
                 </div>
 
@@ -87,7 +87,7 @@
 
    
 
-    <script src="./js/login.js"></script>
+    <script src="./assets/js/login.js"></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init({

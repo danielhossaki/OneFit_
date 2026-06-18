@@ -2,7 +2,7 @@ function requireLoginAndHydrateProfile() {
   const usuarioLogadoRaw = localStorage.getItem("usuarioLogado");
 
   if (!usuarioLogadoRaw) {
-    window.location.href = "login.html";
+    window.location.href = "login.php";
     return false;
   }
 
@@ -26,7 +26,7 @@ function requireLoginAndHydrateProfile() {
   }
 
   if (!usuarioLogado || typeof usuarioLogado !== "object") {
-    window.location.href = "login.html";
+    window.location.href = "login.php";
     return false;
   }
 
@@ -69,7 +69,7 @@ function requireLoginAndHydrateProfile() {
 
 function logout() {
   localStorage.removeItem("usuarioLogado");
-  window.location.href = "login.html";
+  window.location.href = "login.php";
 }
 
 const PLAN_STORAGE_KEY = "ONEFIT_SELECTED_PLAN";
@@ -1163,7 +1163,7 @@ function useCashback() {
     return;
   }
 
-  window.location.href = "./marketplace.html";
+  window.location.href = "./marketplace.php";
 }
 
 async function payNow() {

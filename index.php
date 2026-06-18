@@ -11,8 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="./css/index.css">
-  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="./assets/css/index.css">
 </head>
 
 <body>
@@ -40,7 +39,7 @@ nav-blur = classe personalizada -->
         <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#inicio">
 
           <!-- Logo -->
-          <img src="./img/logo_onefit.png" class="logo_navbar" alt="">
+          <img src="./assets/img/logo_onefit.png" class="logo_navbar" alt="">
 
           <!-- Nome -->
           OneFit
@@ -87,15 +86,15 @@ nav-blur = classe personalizada -->
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="./Profissionais.html">Profissionais</a>
+              <a class="nav-link" href="./Profissionais.php">Profissionais</a>
             </li>
 
 
             <!-- Botão de login -->
-            <a href="login.html" class="botao_login">
+            <a href="login.php" class="botao_login">
 
               <!-- ícone -->
-              <img src="./img/person-circle.svg" alt="Login">
+              <img src="./assets/img/person-circle.svg" alt="Login">
 
               <!-- texto -->
               <span class="texto_login">Login</span>
@@ -216,13 +215,13 @@ nav-blur = classe personalizada -->
       <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="2000">
-            <img src="./img/faixada-img.png" class="d-block w-100" alt="...">
+            <img src="./assets/img/faixada-img.png" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item" data-bs-interval="2000">
-            <img src="./img/aparelhos-img.png" class="d-block w-100" alt="...">
+            <img src="./assets/img/aparelhos-img.png" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item" data-bs-interval="2000">
-            <img src="./img/banheiro-img.png" class="d-block w-100" alt="...">
+            <img src="./assets/img/banheiro-img.png" class="d-block w-100" alt="...">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
@@ -347,7 +346,7 @@ nav-blur = classe personalizada -->
                 <li>Acesso horário normal</li>
               </ul>
 
-              <a href="./matricula.html">
+              <a href="./matricula.php">
                 <button class="plano-btn w-100">Matricule-se</button>
               </a>
             </div>
@@ -365,7 +364,7 @@ nav-blur = classe personalizada -->
                 <li>Treino personalizado</li>
               </ul>
 
-              <a href="./matricula.html">
+              <a href="./matricula.php">
                 <button class="plano-btn w-100">Matricule-se</button>
               </a>
             </div>
@@ -383,7 +382,7 @@ nav-blur = classe personalizada -->
                 <li>Avaliação física</li>
               </ul>
 
-              <a href="./matricula.html">
+              <a href="./matricula.php">
                 <button class="plano-btn w-100">Matricule-se</button>
               </a>
             </div>
@@ -401,7 +400,7 @@ nav-blur = classe personalizada -->
                 <li>Aulas VIP</li>
               </ul>
 
-              <a href="./matricula.html">
+              <a href="./matricula.php">
                 <button class="plano-btn w-100">Matricule-se</button>
               </a>
             </div>
@@ -419,7 +418,7 @@ nav-blur = classe personalizada -->
                 <li>Área exclusiva</li>
               </ul>
 
-              <a href="./matricula.html">
+              <a href="./matricula.php">
                 <button class="plano-btn w-100">Matricule-se</button>
               </a>
             </div>
@@ -455,157 +454,22 @@ nav-blur = classe personalizada -->
     </section>
   </main>
 
+
   <!-- ===================================================== -->
   <!-- FOOTER -->
   <!-- ===================================================== -->
-  <footer>
-
-    <div id="rodape-1">
-
-      <div class="holder-1-rodape d-flex flex-column">
-        <a href="./index.html#sobre">Sobre nós
-
-          <img
-            src="https://cdn.prod.website-files.com/67ec66139f8f56d61a1cd4c9/68a4b3ec867a722470f71653_seta-rodape.svg"
-            loading="lazy" alt="" class="seta-link-footer">
-        </a>
-
-        <a href="./matricula.html">Matricule-se
-
-          <img
-            src="https://cdn.prod.website-files.com/67ec66139f8f56d61a1cd4c9/68a4b3ec867a722470f71653_seta-rodape.svg"
-            loading="lazy" alt="" class="seta-link-footer">
-        </a>
-
-        <a href="./index.html#planos">Conheça nossos planos
-
-          <img
-            src="https://cdn.prod.website-files.com/67ec66139f8f56d61a1cd4c9/68a4b3ec867a722470f71653_seta-rodape.svg"
-            loading="lazy" alt="" class="seta-link-footer">
-        </a>
-
-      </div>
-
-      <div class="holder-2-rodape d-flex flex-column">
-        <a href="./index.html#localizacao">Encontre nossa unidade
-
-          <img
-            src="https://cdn.prod.website-files.com/67ec66139f8f56d61a1cd4c9/68a4b3ec867a722470f71653_seta-rodape.svg"
-            loading="lazy" alt="" class="seta-link-footer">
-        </a>
-
-        <a href="./index.html#espaco">Conheça nosso espaço
-
-          <img
-            src="https://cdn.prod.website-files.com/67ec66139f8f56d61a1cd4c9/68a4b3ec867a722470f71653_seta-rodape.svg"
-            loading="lazy" alt="" class="seta-link-footer">
-        </a>
-
-        <a href="./Profissionais.html">Nossos profissionais
-
-          <img
-            src="https://cdn.prod.website-files.com/67ec66139f8f56d61a1cd4c9/68a4b3ec867a722470f71653_seta-rodape.svg"
-            loading="lazy" alt="" class="seta-link-footer">
-        </a>
-
-      </div>
-
-      <div class="holder-3-rodape d-flex flex-column">
-        <a href="./img/termos_de_uso_onefit.pdf">Termos de uso
-
-          <img
-            src="https://cdn.prod.website-files.com/67ec66139f8f56d61a1cd4c9/68a4b3ec867a722470f71653_seta-rodape.svg"
-            loading="lazy" alt="" class="seta-link-footer">
-        </a>
-
-        <a href="./img/politica_de_privacidade_onefit.pdf">Políticas de privacidade
-
-          <img
-            src="https://cdn.prod.website-files.com/67ec66139f8f56d61a1cd4c9/68a4b3ec867a722470f71653_seta-rodape.svg"
-            loading="lazy" alt="" class="seta-link-footer">
-        </a>
-
-        <a
-          href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJNwgMZMDDsgJRjKhkFNhVJGCJnGLvRNnRfRpmRwHTnKsBPPztsmHmJpczQPmSPHmqFNTNV">Ajuda
-          e suporte
-
-          <img
-            src="https://cdn.prod.website-files.com/67ec66139f8f56d61a1cd4c9/68a4b3ec867a722470f71653_seta-rodape.svg"
-            loading="lazy" alt="" class="seta-link-footer">
-        </a>
-
-      </div>
-
-      <div class="holder-4-rodape d-flex flex-column">
-        <h2>
-          Entre em contato
-        </h2>
-
-        <a id="botao-fale-conosco"
-          href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJNwgMZMDDsgJRjKhkFNhVJGCJnGLvRNnRfRpmRwHTnKsBPPztsmHmJpczQPmSPHmqFNTNV"
-          target="_blank">
-          Converse com a One...
-
-          <img id="seta-link-botao"
-            src="https://cdn.prod.website-files.com/67ec66139f8f56d61a1cd4c9/68a4b3ec867a722470f71653_seta-rodape.svg"
-            loading="lazy" alt="">
-        </a>
-      </div>
-
-    </div>
-
-    <div id="rodape-2">
-
-      <div id="titulo-rodape-2">
-        <h2>Visite nossas redes sociais</h2>
-      </div>
-
-      <div class="redes-sociais">
-        <a href="https://www.facebook.com/PanobiancoAcademia" target="_blank" class="link-rede-social w-inline-block">
-          <img src="https://cdn.prod.website-files.com/67ec66139f8f56d61a1cd4c9/68a4b150a5b3f9991bb29f3c_facebook.svg"
-            loading="lazy" alt="" class="logo-rede-social">
-        </a>
-
-        <a href="https://www.instagram.com" target="_blank" class="link-rede-social w-inline-block"><img
-            src="https://cdn.prod.website-files.com/67ec66139f8f56d61a1cd4c9/68a4b15088c80ce64ec8857f_instagram.svg"
-            loading="lazy" alt="" class="logo-rede-social">
-        </a>
-
-        <a href="https://www.linkedin.com" target="_blank" class="link-rede-social w-inline-block"><img
-            src="https://cdn.prod.website-files.com/67ec66139f8f56d61a1cd4c9/68a4b150a55a7b89f0cd9dd8_linkedin.svg"
-            loading="lazy" alt="" class="logo-rede-social">
-        </a>
-
-        <a href="https://www.youtube.com" target="_blank" class="link-rede-social w-inline-block"><img
-            src="https://cdn.prod.website-files.com/67ec66139f8f56d61a1cd4c9/68a4b150270f174faa8c122e_youtube.svg"
-            loading="lazy" alt="" class="logo-rede-social">
-        </a>
-
-        <a href="https://www.tiktok.com" target="_blank" class="link-rede-social w-inline-block"><img
-            src="https://cdn.prod.website-files.com/67ec66139f8f56d61a1cd4c9/68a4b15055cebdf9dbd254c4_tiktok.svg"
-            loading="lazy" alt="" class="logo-rede-social">
-        </a>
-      </div>
-
-      <div class="footer-bottom_separador hide-mb"></div>
-
-      <div class="text-size-tiny">© 2026 &nbsp; Desenvolvido por Ignite Software</div>
-
-    </div>
-
-  </footer>
-
+  <?php include 'components/footer.php'; ?>
 
   <!-- Botão do WhatsApp -->
   <a href="https://wa.me/5511999999999" target="_blank" id="whatsapp-btn">
-    <img src="./img/icone-whatsapp.png" id="whatsapp-logo" alt="WhatsApp">
+    <img src="./assets/img/icone-whatsapp.png" id="whatsapp-logo" alt="WhatsApp">
   </a>
 
 
   <!-- links: bootstrap e javascript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="./js/catalogoPublico.js"></script>
-  <script src="./js/index.js"></script>
+  <script src="./assets/js/catalogoPublico.js"></script>
+  <script src="./assets/js/index.js"></script>
 
   <!-- Animações do AOS JS (para os plano-card)-->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
